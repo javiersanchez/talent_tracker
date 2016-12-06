@@ -10,7 +10,13 @@ var config = {
     messagingSenderId: "703826121754"
 };
 firebase.initializeApp(config);
+var admin = require("firebase-admin");
+var serviceAccount = require("./Talent_Tracker-73b9d4607dd9.json");
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://talent-tracker-be199.firebaseio.com"
+});
 
 //Llamamos Handlebars para usarlo en el proyecto y asignamos un layout (default)
 var handlebars = require('express-handlebars').create(
