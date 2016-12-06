@@ -1,14 +1,16 @@
 var express = require('express');
 var app = express();
 
-var admin = require("firebase-admin");
+firebase = require('firebase');
+var config = {
+    apiKey: "AIzaSyDoRCqwF3xxMIh3AuzU4mQtvZ6i-n0xGuc",
+    authDomain: "talent-tracker-be199.firebaseapp.com",
+    databaseURL: "https://talent-tracker-be199.firebaseio.com",
+    storageBucket: "talent-tracker-be199.appspot.com",
+    messagingSenderId: "703826121754"
+};
+firebase.initializeApp(config);
 
-var serviceAccount = require("./Talent_Tracker-73b9d4607dd9.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://talent-tracker-be199.firebaseio.com"
-});
 
 //Llamamos Handlebars para usarlo en el proyecto y asignamos un layout (default)
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
@@ -53,41 +55,35 @@ app.post('/search_result', function (req, res) {
 })
 
 app.get('/create', function (req, res) {
-  res.send('<form action="/create" method="post"><input id="name" name="name" type="text"><input type="submit">');
+  var tName= "tName";
+    var tPosition= "tPosition";
+    var tArea= "tArea";
+    var btnSave= "btnSave";
+    var form= '<form action="/create" method="post">'
+            + '<label for="'+tName+'">Name</label><br/>'
+            + '<input id="'+tName+'" name="'+tName+'" type="text" /><br/>'
+            + '<label for="'+tPosition+'">Position</label><br/>'
+            + '<input id="'+tPosition+'" name="'+tPosition+'" type="text" /><br/>'
+            + '<label for="'+tName+'">Area of interest</label><br/>'
+            + '<input id="'+tArea+'" name="'+tArea+'" type="text" /><br/>'
+            + '<button id="'+btnSave+'" name="'+btnSave+'" type="submit">Save</button><br/>'
+            + '</form>'
+    res.send(form)
+    //res.render('create');
 })
 
 app.post('/create', function (req, res) {
-  res.send("Name: " + req.body.name + "</ br>" +
-           "Job position: " + req.body.job_position + "</ br>" +
-           "Area: " + req.body.area + "</ br>" +
-           "Potential: " + req.body.potential + "</ br>" +
-           "Career: " + req.body.career + "</ br>" +
-           "Status: " + req.body.status + "</ br>" +
-           "Key contributor: " + req.body.key_contributor + "</ br>" +
-           "Specialist critical: " + req.body.specialist_critical + "</ br>" +
-           "Probability of loss: " + req.body.probability_of_loss + "</ br>" +
-           "Impact loss: " + req.body.impact_loss + "</ br>" +
-           "Areas to develop: " + req.body.areas_to_develop + "</ br>" +
-           "Strengths: " + req.body.strengths + "</ br>" +
-           "Relevant technical knowledge: " + req.body.relevant_technical_knowledge + "</ br>" +
-           "Commercial: " + req.body.commercial + "</ br>" +
-           "marketing: " + req.body.marketing + "</ br>" +
-           "Administration: " + req.body.administration + "</ br>" +
-           "Finance: " + req.body.finance + "</ br>" +
-           "Human resources: " + req.body.human_resources + "</ br>" +
-           "Product: " + req.body.product + "</ br>" +
-           "IT: " + req.body.it + "</ br>" +
-           "Movement time for areas of interest: " + req.body.movement_time_areas_interest + "</ br>" +
-           "Movement time for international mobility: " + req.body.movement_time_international_mobility + "</ br>" +
-           "Possibility of development: " + req.body.possibility_of_development + "</ br>" +
-           "Time development movement possibility: " + req.body.time_development_movement_possibility + "</ br>" +
-           "Representation: " + req.body.representation + "</ br>" +
-           "Strategic vision: " + req.body.strategic_vision + "</ br>" +
-           "Business understanding and capacity analisys: " + req.body.business_understanding + "</ br>" +
-           "Succesor A: " + req.body.succesor_a + "</ br>" +
-           "Succesor B: " + req.body.succesor_b + "</ br>" +
-           "Succesor C: " + req.body.succesor_c
-           );
+    var person = req.body;
+    
+    var db = firebase.database();		
+    var tabla = db.ref().child("partners");	
+    tabla.push().set( {
+        name: person.tName,
+        job_position: req.body.tPosition,
+        area_of_interest : req.body.tArea
+    });
+    
+    res.send(req.body)
 })
 
 app.get('/edit/:id', function (req, res) {
