@@ -71,6 +71,7 @@ app.post('/search_result', function (req, res) {
 
 app.get('/create', function (req, res) {
     
+ /*
   var tName= "tName";
     var tPosition= "tPosition";
     var tArea= "tArea";
@@ -86,6 +87,7 @@ app.get('/create', function (req, res) {
             + '</form>'
     res.send(form)
     //res.render('create');
+    */
 
   //res.send('Hello World!')2
     var context = {name:"Marco", user:"Julius Papagorgio"};
