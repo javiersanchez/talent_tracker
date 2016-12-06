@@ -54,11 +54,11 @@ BUTTON.btn-load {
     
 }
 .side-menu LI {
-    height:150px;
-    width:150px;
-    padding:45% 0;
+    /* height:150px; */
+    /* width:150px; */
+    /* padding:45% 0; */
     color:#FFFFFF;
-    border-bottom:1px solid #FFFFFF;
+    border-bottom: 1px solid #0F1A4C;
 }
 
 /* MAIN SECTION */
@@ -81,4 +81,16 @@ H1.section-header {
     font-size:21px;
 }
 
+
+
+/***
+nav menu CSS FOR SHOW HIDING ELEMENTS
+***/
+.pan-visible {
+    display:block;
+}
+
+.pan-invisible {
+    display:none;
+}
 

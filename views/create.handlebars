@@ -1,4 +1,11 @@
 {{> top-nav}}
+<h1>{{name}}</h1>
+    <div class="container sec-busqueda">
+        
+    <div class="row">
+        <div class="col-lg-8">
+    {{> search-bar}}
+
         </div>
         <div class="col-lg-4">
         <h4>Personita</h4>
@@ -13,10 +20,17 @@
       <div class="col-lg-10 main-container">
       
           <form action="/crear" method="post" class="form-horizontal">
-          <div class="form-group">
+        <div class="mpanel pan-visible" id="tr">
+              
+        <h1 class="section-header">
+            TALENT REVIEW
+        </h1>
+          
+           <div class="form-group">
             <label class="control-label">Name:</label>
             <input type="text" name="name"><br>
           </div>
+
           <div class="form-group">
             <label class="control-label">Job position:</label>
             <input type="text" name="job_position"><br>
@@ -27,26 +41,29 @@
             <input type="text" name="area"><br>
           <div class="form-group">
 
-          <div class="form-group">
-            <label class="control-label">Área</label>
-            <input type="text" name="area"><br>
-          <div class="form-group">
-
-          <select class="form-control" data-with="">
-              <option>-Select-</option>
-              <option>High potential</option>
-              <option>Potential</option>
-              <option>Consolidated</option>
+            <div class="form-group">
+            <label for="potential">potential</label>
+              <select class="form-control" data-with="potential">
+                <option>-Select-</option>
+                <option>High potential</option>
+                <option>Potential</option>
+                <option>Consolidated</option>
             </select>
+            </div>
 
-           <select class="form-control" data-with="">
+          <div class="form-group">
+           <label for="potential">Career</label>
+           <select class="form-control" data-with="career">
               <option>-Select-</option>
               <option>Management</option>
               <option>Specialist</option>
               <option>Both</option>
             </select>
+          </div>
 
-           <select class="form-control" data-with="">
+          <div class="form-group">
+            <label for="status" id="tipo_ubicacion">Status:</label>
+            <select class="form-control" data-with="status" id="status">
               <option>-Select-</option>
               <option>Next To Retirement</option>
               <option>Recent Entry</option>
@@ -55,59 +72,57 @@
               <option>Recent Movement</option>
               <option>Do NoT Apply</option>
             </select>
+          </div>
+
+         <div class="form-group">
+              <input type="checkbox" name="key_contributor" value="Bike"> Key contributor:<br>
+              <input type="checkbox" name="specialist_critical" value="Car" checked>Specialist Critical:<br>
+          </div>
 
           <div class="form-group">
-            <label class="control-label">Área</label>
-            <input type="text" name="area"><br>
-          <div class="form-group">
+            <label for="potential">Probability Of Loss</label>
+            <select class="form-control" data-with="probability_of_loss">
+              <option>-Select-</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+            </div>
+ 
+            <label for="potential">Impact Loss</label>
+            <select class="form-control" data-with="impact_loss">
+              <option>-Select-</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+        </div>
+              <div class="mpanel pan-invisible" id="ca">
+              
+        <h1 class="section-header">
+            CAREER ASPIRATIONS
+        </h1>
+          
+          
+        </div>
+        <div class="mpanel pan-invisible" id="com">
+              
+        <h1 class="section-header">
+            COMPETENCIES
+        </h1>
+               
+        </div>
+       
+       <div class="mpanel pan-invisible" id="suc">
+              
+        <h1 class="section-header">
+            SUCESSORS
+        </h1>
+          
+              
+        </div>
+              </form>  
 
-
-<FORM action="http://algunsitio.com/prog/usuarionuevo" method="post">
-    <P>
-    <LABEL for="nombre">Nombre: </LABEL>
-              <INPUT type="text" id="nombre"><BR>
-    <LABEL for="apellido">Apellido: </LABEL>
-              <INPUT type="text" id="apellido"><BR>
-    <LABEL for="email">email: </LABEL>
-              <INPUT type="text" id="email"><BR>
-    <INPUT type="radio" name="sexo" value="Varón"> Varón<BR>
-    <INPUT type="radio" name="sexo" value="Mujer"> Mujer<BR>
-    <INPUT type="submit" value="Enviar"> <INPUT type="reset">
-    </P>
- </FORM>
-
-          "Potential: " + req.body.potential + "</ br>" +
-          "Career: " + req.body.career + "</ br>" +
-          "Status: " + req.body.status + "</ br>" +
-          "Key contributor: " + req.body.key_contributor + "</ br>" +
-          "Specialist critical: " + req.body.specialist_critical + "</ br>" +
-          "Probability of loss: " + req.body.probability_of_loss + "</ br>" +
-          "Impact loss: " + req.body.impact_loss + "</ br>" +
-          "Areas to develop: " + req.body.areas_to_develop + "</ br>" +
-          "Strengths: " + req.body.strengths + "</ br>" +
-          "Relevant technical knowledge: " + req.body.relevant_technical_knowledge + "</ br>" +
-          "Commercial: " + req.body.commercial + "</ br>" +
-          "marketing: " + req.body.marketing + "</ br>" +
-          "Administration: " + req.body.administration + "</ br>" +
-          "Finance: " + req.body.finance + "</ br>" +
-          "Human resources: " + req.body.human_resources + "</ br>" +
-          "Product: " + req.body.product + "</ br>" +
-          "IT: " + req.body.it + "</ br>" +
-          "Movement time for areas of interest: " + req.body.movement_time_areas_interest + "</ br>" +
-          "Movement time for international mobility: " + req.body.movement_time_international_mobility + "</ br>" +
-          "Possibility of development: " + req.body.possibility_of_development + "</ br>" +
-          "Time development movement possibility: " + req.body.time_development_movement_possibility + "</ br>" +
-          "Representation: " + req.body.representation + "</ br>" +
-          "Strategic vision: " + req.body.strategic_vision + "</ br>" +
-          "Business understanding and capacity analisys: " + req.body.business_understanding + "</ br>" +
-          "Succesor A: " + req.body.succesor_a + "</ br>" +
-          "Succesor B: " + req.body.succesor_b + "</ br>" +
-          "Succesor C: " + req.body.succesor_c
-
-
-
-
-
-              </form>
           </div>
     </div>
+        
