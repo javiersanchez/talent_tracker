@@ -82,3 +82,15 @@ H1.section-header {
 }
 
 
+
+/***
+nav menu CSS FOR SHOW HIDING ELEMENTS
+***/
+.pan-visible {
+    display:block;
+}
+
+.pan-invisible {
+    display:none;
+}
+
