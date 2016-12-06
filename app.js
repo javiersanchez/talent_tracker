@@ -83,7 +83,7 @@ app.get('/create', function (req, res) {
             + '<input id="'+tArea+'" name="'+tArea+'" type="text" /><br/>'
             + '<button id="'+btnSave+'" name="'+btnSave+'" type="submit">Save</button><br/>'
             + '</form>'
-    res.send(form)
+   // res.send(form)
     //res.render('create');
 
   //res.send('Hello World!')2
