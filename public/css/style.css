@@ -1,0 +1,289 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	background: rgba(56,20,85,1);
+    background: -moz-linear-gradient(top, rgba(56,20,85,1) 0%, rgba(10,57,103,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(56,20,85,1)), color-stop(100%, rgba(10,57,103,1)));
+    background: -webkit-linear-gradient(top, rgba(56,20,85,1) 0%, rgba(10,57,103,1) 100%);
+    background: -o-linear-gradient(top, rgba(56,20,85,1) 0%, rgba(10,57,103,1) 100%);
+    background: -ms-linear-gradient(top, rgba(56,20,85,1) 0%, rgba(10,57,103,1) 100%);
+    background: linear-gradient(to bottom, rgba(56,20,85,1) 0%, rgba(10,57,103,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#381455', endColorstr='#0a3967', GradientType=0 );
+background-repeat: no-repeat;
+background-size: 100% auto;
+}
+
+header{background-color: #8D0F5C;
+width: 100%;
+height: 68px;
+}
+
+.logo{
+	width: 20%;
+	float: left;
+	height: 50px;
+	margin: 14px 0 0 0;
+}
+
+#login{
+	width: 35%;
+	height: 366px;
+    background: #FFFFFF;
+    border: 1px solid #B7BCC0;
+    border-radius: 5px;
+    float: none;
+    margin: 50px auto;
+}
+
+#login img{
+	width: 50%;
+    float: none;
+    margin: 20px 25%;
+}
+
+.logout{
+font-family: Avenir-Heavy;
+font-size: 18px;
+color: #50E3C2;
+width: 10%;
+height: 50px;
+float: right;
+margin: 24px 0 0 10px;
+}
+
+.logout:hover{
+color: #28B8AC;
+}
+
+hr{
+	color: #E1E1E1;
+}
+
+h2{
+font-family: Helvetica-Bold;
+font-size: 20px;
+color: #4A4A4A;
+text-align: center;
+}
+
+
+.user{
+	width: 30%;
+	height: 50px;
+	float: right;
+	color: #FFFFFF;
+	margin: 24px 0 0 0;
+	text-align: right;
+}
+
+#busqueda{
+	width: 100%;
+	height: 112px;
+	background-color: #4877A8;
+	float: left;
+}
+
+.resultadobusqueda{
+	width: 50%;
+	height: 90px;
+	float: right;
+}
+
+
+
+#containergeneral{
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	float: none;
+	margin: auto;
+} 
+
+
+.foto{
+	width: 30px;
+
+}
+
+.empleado{
+
+}
+
+
+
+
+ul{
+	    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0;
+
+}
+
+nav{
+	width: 100%;
+	height: 1200px;
+    background-color: rgba(5,16,40,.2);
+    float: left;
+}
+
+nav ul li {
+	height: 112px;
+	list-style: none;
+	color: #FFFFFF;
+	text-align: center;
+	border-bottom: solid 1px #0F1A4C;
+}
+
+nav ul li:hover {
+	background-color: rgba(5,16,40,.6);
+}
+
+.active{
+	background-color: rgba(5,16,40,.6);
+}
+
+nav ul li a {
+	list-style: none;
+	color: #FFFFFF !important;
+	text-align: center;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav ul li a img {
+	float: none;
+margin:25px auto 10px;
+}
+
+#vista{
+	width: 80%;
+	height: auto;
+	float: right;
+	background-color: #FFFFFF;
+}
+
+input {
+    -webkit-appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    border-width: 0;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    font-size: 16px;
+}
+
+
+.name{
+	width: 350px;
+	height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #B7BCC0;
+    border-radius: 3px;
+    margin: 30px 30px 0 0;
+}
+
+.load{
+	width: 180px;
+	height: 40px;
+background: #2CCCBF;
+text-align: center;
+border-radius: 3px;
+font-family: Avenir-Heavy;
+font-size: 21px;
+color: #FFFFFF;
+}
+
+.load:hover{
+background: #28B8AC;
+}
+
+.save{
+	width: 80%;
+	height: 40px;
+background: #2CCCBF;
+text-align: center;
+border-radius: 3px;
+font-family: Avenir-Heavy;
+font-size: 21px;
+color: #FFFFFF;
+float:left;
+margin: 20px 10%;
+}
+
+.save:hover{
+background: #28B8AC;
+}
+
+.cancel{
+	width: 430px;
+	height: 40px;
+	background-color: transparent;
+text-align: center;
+border-radius: 3px;
+border:solid 1px #2CCCBF;
+font-family: Avenir-Heavy;
+font-size: 21px;
+float: left;
+color: #2CCCBF;
+margin: 20px;
+}
+
+.cancel:hover{
+background: #2CCCBF;
+color: #FFFFFF;
+}
+
+.general{
+	width: 300px;
+	height: 35px;
+	border-radius: 3px;
+	border:solid 1px #B7BCC0;
+}
+
+.shape {
+	width: 300px;
+	height: 35px;
+	border-radius: 3px;
+	border:solid 1px #B7BCC0;
+    margin: 30px 20px 10px 20px;
+    overflow: hidden;
+    background: url("../images/shape.png") no-repeat 100% center;
+ }
+
+
+.shape select {
+    padding: 5px 0 0 5px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    font-family: Avenir-Book;
+    color: #4A4A4A;
+}
+
+.check {
+	width: 20px;
+	height: 20px;
+	border: solid 1px #B7BCC0;
+	float: left;
+    border-radius: 3px;
+}
+

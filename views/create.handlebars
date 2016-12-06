@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-lg-8">
     {{> search-bar}}
+
         </div>
         <div class="col-lg-4">
         <h4>Personita</h4>
@@ -17,6 +18,7 @@
                 {{> nav-menu}}
             </div>
       <div class="col-lg-10 main-container">
+      
           <form action="/crear" method="post" class="form-horizontal">
         <div class="mpanel pan-visible" id="tr">
               
@@ -24,18 +26,76 @@
             TALENT REVIEW
         </h1>
           
+           <div class="form-group">
+            <label class="control-label">Name:</label>
+            <input type="text" name="name"><br>
+          </div>
+
           <div class="form-group">
-          <label class="control-label">Potencial</label>
-              <select class="form-control" data-with="fit">
-                  <option>-Select-</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <label class="control-label">Job position:</label>
+            <input type="text" name="job_position"><br>
+          <div class="form-group">
+
+          <div class="form-group">
+            <label class="control-label">Área</label>
+            <input type="text" name="area"><br>
+          <div class="form-group">
+
+            <div class="form-group">
+            <label for="potential">potential</label>
+              <select class="form-control" data-with="potential">
+                <option>-Select-</option>
+                <option>High potential</option>
+                <option>Potential</option>
+                <option>Consolidated</option>
+            </select>
+            </div>
+
+          <div class="form-group">
+           <label for="potential">Career</label>
+           <select class="form-control" data-with="career">
+              <option>-Select-</option>
+              <option>Management</option>
+              <option>Specialist</option>
+              <option>Both</option>
             </select>
           </div>
-              
+
+          <div class="form-group">
+            <label for="status" id="tipo_ubicacion">Status:</label>
+            <select class="form-control" data-with="status" id="status">
+              <option>-Select-</option>
+              <option>Next To Retirement</option>
+              <option>Recent Entry</option>
+              <option>Attitude Problems</option>
+              <option>Inhability</option>
+              <option>Recent Movement</option>
+              <option>Do NoT Apply</option>
+            </select>
+          </div>
+
+         <div class="form-group">
+              <input type="checkbox" name="key_contributor" value="Bike"> Key contributor:<br>
+              <input type="checkbox" name="specialist_critical" value="Car" checked>Specialist Critical:<br>
+          </div>
+
+          <div class="form-group">
+            <label for="potential">Probability Of Loss</label>
+            <select class="form-control" data-with="probability_of_loss">
+              <option>-Select-</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+            </div>
+ 
+            <label for="potential">Impact Loss</label>
+            <select class="form-control" data-with="impact_loss">
+              <option>-Select-</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
         </div>
               <div class="mpanel pan-invisible" id="ca">
               
@@ -43,58 +103,26 @@
             CAREER ASPIRATIONS
         </h1>
           
-          <div class="form-group">
-          <label class="control-label">Potencial</label>
-              <select class="form-control" data-with="fit">
-                  <option>-Select-</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-              
+          
         </div>
         <div class="mpanel pan-invisible" id="com">
               
         <h1 class="section-header">
             COMPETENCIES
         </h1>
-          
-          <div class="form-group">
-          <label class="control-label">Potencial</label>
-              <select class="form-control" data-with="fit">
-                  <option>-Select-</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-              
+               
         </div>
-              <div class="mpanel pan-invisible" id="suc">
+       
+       <div class="mpanel pan-invisible" id="suc">
               
         <h1 class="section-header">
             SUCESSORS
         </h1>
           
-          <div class="form-group">
-          <label class="control-label">Potencial</label>
-              <select class="form-control" data-with="fit">
-                  <option>-Select-</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
               
         </div>
               </form>  
+
           </div>
     </div>
         
