@@ -1,6 +1,6 @@
 /**** MAIN.JS ***/
 
-function togglePanels(uid){
+function togglePanels(uid,event){
    
     $(".mpanel").each(function(){
         
@@ -8,5 +8,7 @@ function togglePanels(uid){
     });
    
     $("#" + uid).addClass("pan-visible").removeClass('pan-invisible');
-    //e.stopPropagation();
+    
+    this.event.preventDefault();
+    return false;
 }

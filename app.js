@@ -36,7 +36,9 @@ app.use(require('body-parser').urlencoded({extended:true}));
 //Asignar ruta publica pra elementos estaticos
 app.use(express.static(__dirname + "/public"));
 
-
+app.get("/",function(req,res){
+    res.redirect("/login");
+});
 app.get('/login', function (req, res) {
   res.render('login');
 })
@@ -54,7 +56,10 @@ app.post('/search', function (req, res) {
 })
 
 app.get('/search_result', function (req, res) {
-  res.send('Hello World!')
+    //Prepare for autocomplete
+    var db = admin.database();
+var ref = db.ref('users');
+  res.send(ref);
 })
 
 app.post('/search_result', function (req, res) {
@@ -113,7 +118,8 @@ app.post('/edit/:id', function (req, res) {
 })
 
 app.get('/view/:id', function (req, res) {
-  res.send('Hello World!')
+    res.render("view");
+  //res.send('Hello World!')
 })
 
 app.post('/view/:id', function (req, res) {
