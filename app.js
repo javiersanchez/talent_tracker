@@ -10,7 +10,13 @@ var config = {
     messagingSenderId: "703826121754"
 };
 firebase.initializeApp(config);
+var admin = require("firebase-admin");
+var serviceAccount = require("./Talent_Tracker-73b9d4607dd9.json");
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://talent-tracker-be199.firebaseio.com"
+});
 
 //Llamamos Handlebars para usarlo en el proyecto y asignamos un layout (default)
 var handlebars = require('express-handlebars').create(
@@ -70,6 +76,7 @@ app.post('/search_result', function (req, res) {
 
 app.get('/create', function (req, res) {
     
+ /*
   var tName= "tName";
     var tPosition= "tPosition";
     var tArea= "tArea";
@@ -85,6 +92,7 @@ app.get('/create', function (req, res) {
             + '</form>'
    // res.send(form)
     //res.render('create');
+    */
 
   //res.send('Hello World!')2
     var context = {name:"Marco", user:"Julius Papagorgio"};
