@@ -27,35 +27,33 @@
         </h1>
           
            <div class="form-group">
-            <label class="control-label">Name:</label>
-            <input type="text" name="name"><br>
+            <label class="control-label">Name: </label>
+            <input type="text" name="name" id="name" value="{{name}}"><br>
           </div>
 
           <div class="form-group">
             <label class="control-label">Job position:</label>
-            <input type="text" name="job_position"><br>
+            <input type="text" name="job_position" id="job_position" value="{{job_position}}"><br>
           <div class="form-group">
 
           <div class="form-group">
-            <label class="control-label">Área</label>
-            <input type="text" name="area"><br>
+            <label class="control-label">Área:</label>
+            <input type="text" name="area" id="area" vaue="{{area}}"><br>
           <div class="form-group">
 
             <div class="form-group">
-            <label for="potential">potential</label>
-              <select class="form-control" data-with="potential">
-                <option>-Select-</option>
-                <option>High potential</option>
-                <option>Potential</option>
-                <option>Consolidated</option>
+            <label for="potential">potential:</label>
+              <select class="form-control" id="potential">
+                <option value="high potencial" selected="">High potential</option>
+                <option value="potential">Potential</option>
+                <option value="consolidate" >Consolidated</option>
             </select>
             </div>
 
           <div class="form-group">
-           <label for="potential">Career</label>
-           <select class="form-control" data-with="career">
-              <option>-Select-</option>
-              <option>Management</option>
+           <label for="career">Career:</label>
+           <select class="form-control" id="career">
+              <option selected="">Management</option>
               <option>Specialist</option>
               <option>Both</option>
             </select>
@@ -63,46 +61,54 @@
 
           <div class="form-group">
             <label for="status" id="tipo_ubicacion">Status:</label>
-            <select class="form-control" data-with="status" id="status">
-              <option>-Select-</option>
+            <select class="form-control" data-with="Do not apply" id="status">
               <option>Next To Retirement</option>
               <option>Recent Entry</option>
               <option>Attitude Problems</option>
-              <option>Inhability</option>
+              <option>Inability</option>
               <option>Recent Movement</option>
-              <option>Do NoT Apply</option>
+              <option selected="">Do NoT Apply</option>
             </select>
           </div>
 
          <div class="form-group">
-              <input type="checkbox" name="key_contributor" value="Bike"> Key contributor:<br>
-              <input type="checkbox" name="specialist_critical" value="Car" checked>Specialist Critical:<br>
+              <input type="checkbox" name="key_contributor" value="1"> Key contributor:<br>
+              <input type="checkbox" name="specialist_critical" value="1" checked>Specialist Critical:<br>
           </div>
 
           <div class="form-group">
-            <label for="potential">Probability Of Loss</label>
-            <select class="form-control" data-with="probability_of_loss">
-              <option>-Select-</option>
+            <label for="probability_of_loss">Probability Of Loss:</label>
+            <select class="form-control" data-with="probability_of_loss" id="probability_of_loss">
               <option>Low</option>
               <option>Medium</option>
               <option>High</option>
             </select>
             </div>
- 
-            <label for="potential">Impact Loss</label>
-            <select class="form-control" data-with="impact_loss">
-              <option>-Select-</option>
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
-            </select>
+
+        <div class="form-group">
+        <label for="areas_to_develop">Áreas To Develop:</label>
+        <textarea  name="areas_to_develop" id="areas_to_develop" rows="10" cols="50" value="{{areas_to_develop}}"></textarea>
         </div>
-              <div class="mpanel pan-invisible" id="ca">
+
+        <div class="form-group">
+        <label for="strengths">Strengths:</label>
+         <textarea  name="strengths" id="strengths" rows="10" cols="50" value="{{strengths}}"></textarea>
+        </div>
+
+        <div class="form-group">
+        <label for="relevant_technical_knowledge">Impact Loss</label>
+         <textarea  name="relevant_technical_knowledge" id="relevant_technical_knowledge" rows="10" cols="50" value="{{relevant_technical_knowledge}}"></textarea>
+        </div>
+
+        <div class="mpanel pan-invisible" id="ca">
               
         <h1 class="section-header">
             CAREER ASPIRATIONS
         </h1>
-          
+           <div class="form-group">
+            <label class="control-label">Job position:</label>
+            <input type="text" name="job_position"><br>
+          <div class="form-group">
           
         </div>
         <div class="mpanel pan-invisible" id="com">

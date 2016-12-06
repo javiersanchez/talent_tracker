@@ -287,3 +287,6 @@ color: #FFFFFF;
     border-radius: 3px;
 }
 
+.form-group {
+    margin: 0 auto !important;
+}
