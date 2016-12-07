@@ -24,6 +24,13 @@
         <h1 class="section-header">
             TALENT REVIEW
         </h1>
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
+
           <div id="leftcontent">
            <div class="form-group">
             <label class="control-label tpdf"  >Name:</label>
@@ -77,11 +84,12 @@
             </select>
             </div>
           </div>
-
-         <div class="form-group">
-              <input type="checkbox" class="check" name="key_contributor" id="key_contributor" value="1"> Key contributor:
-              <input type="checkbox" class="check" name="specialist_critical" id="specialist_critical" value="1" checked>Specialist Critical:<br>
-          </div>
+      
+             <div class="form-group">
+                  Key contributor:<input type="checkbox" class="check" name="key_contributor" id="key_contributor" value="1"> 
+                  Specialist Critical:<input type="checkbox" class="check" name="specialist_critical" id="specialist_critical" value="1" checked>
+              </div>
+          
 
           <div class="form-group">
             <label for="probability_of_loss" >Probability Of Loss:</label>
@@ -140,40 +148,112 @@
         <h1 class="section-header">
             CAREER ASPIRATIONS
         </h1>
-        <div id="leftcontent">
-                 <div><label class="subtitulo">Business Units</label></div>
-         <div class="form-group">
-              <div>
-              Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
-              Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
-              Finance:<input type="checkbox" class="check" name="finance" id="finance" value="1" checked>
-              </div>
-              <div>
-              Administration:<input type="checkbox" class="check" name="administration" id="administration" value="1">
-              Human resources:<input type="checkbox" class="check" name="human_resources" id="human_resources" value="1"> 
-              </div>
-              <div>
-              Product: <input type="checkbox" class="check" name="product" id="product" value="1" checked>
-              IT: <input type="checkbox" class="check" name="it" id="it" value="1" checked>
-              </div>
-          </div>
 
-          <label class="subtitulo">Areas Of Interest</label>
-          <div class="form-group">
-              <div>
-              Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
-              Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
-              Finance:<input type="checkbox" class="check" name="finance" id="finance" value="1" checked>
-              </div>
-              <div>
-              Administration:<input type="checkbox" class="check" name="administration" id="administration" value="1">
-              Human resources:<input type="checkbox" class="check" name="human_resources" id="human_resources" value="1"> 
-              </div>
-              <div>
-              Product: <input type="checkbox" class="check" name="product" id="product" value="1" checked>
-              IT: <input type="checkbox" class="check" name="it" id="it" value="1" checked>
-              </div>
-          </div>
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
+
+
+        <div id="leftcontent">
+        <div><label class="subtitulo">Business Units</label></div>
+        <div id="checks">
+        <div class="form-group">
+        <div class="row">
+             <div class="col-lg-10">
+             <div id="checks_seccion1"> <span>Commercial:</span> <input type="checkbox" class="check" {{#checkSelector commercial "1"}} checked {{/checkSelector}} name="commercial" id="commercial" value="1"> 
+             <span>Marketing:</span> <input type="checkbox" class="check"  {{#checkSelector marketing "1"}} checked="checked" {{/checkSelector}} name="marketing" id="marketing" value="1" checked>
+             <span>Finance:</span><input type="checkbox" class="check" {{#checkSelector finance "1"}} checked="checked" {{/checkSelector}}  name="finance" id="finance" value="1" checked></div>
+             
+             <div id="checks_seccion2"><span>Administration:</span><input type="checkbox" class="check" {{#checkSelector administration "1"}} checked="checked" {{/checkSelector}} name="administration" id="administration" value="1">
+             <span>Human resources:</span><input type="checkbox" class="check" name="human_resources" id="human_resources" value="1"></div>
+
+            <div id="checks_seccion3"><span>Product:</span><input type="checkbox" class="check" {{#checkSelector product "1"}} checked="checked" {{/checkSelector}} name="product" id="product" value="1" checked>
+             <div>IT: <input type="checkbox" class="check" {{#checkSelector it "1"}} checked="checked" {{/checkSelector}} name="it" id="it" value="1" checked></div></div>
+
+             </div></div></div>
+         </div>
+
+         <label class="subtitulo">Areas Of Interest</label>
+
+         <div id="checks">
+         <div class="form-group">
+            <div class="col-lg-10">
+            <div id="checkbox_areas">
+            Top Management: <input type="checkbox" class="check" {{#checkSelector top_management "1"}} checked {{/checkSelector}} name=“top_management” id=“top_management” value="1"> 
+            </div>
+
+          
+            <div id="checkbox_admin">
+            <span>Accounting: </span><input type="checkbox" class="check"  {{#checkSelector accounting "1"}} checked="checked" {{/checkSelector}} name="accounting" id="accounting" value="1" checked>
+
+            <span>Accounting Audit:</span><input type="checkbox" class="check" {{#checkSelector accounting_audit "1"}} checked="checked" {{/checkSelector}}  name="accounting_audit" id="accounting_audit" value="1" checked>
+    
+            <span>Payrolls:</span><input type="checkbox" class="check" {{#checkSelector payrolls "1"}} checked="checked" {{/checkSelector}} name="payrolls" id="payrolls" value="1">
+
+            <span>Legal:</span><input type="checkbox" class="check" {{#checkSelector legal "1"}} checked="checked" {{/checkSelector}} name="legal" id="legal" value="1">
+
+            <span>Corporate IT:</span><input type="checkbox" class="check" {{#checkSelector corporate_it "1"}} checked="checked" {{/checkSelector}} name="corporate_it” id="corporate_it” value="1" checked>
+      
+            <span>Human Resources:</span><input type="checkbox" class="check" {{#checkSelector human_resources "1"}} checked="checked" {{/checkSelector}} name="human_resources" id="human_resources" value="1" checked>
+
+            <span>Financial Planning:</span><input type="checkbox" class="check" {{#checkSelector financial_planning "1"}} checked="checked" {{/checkSelector}} name="financial_planning” id="financial_planning” value="1" checked>
+            </div>
+
+            <div id="checkbox_admin2">
+            Marketing: <input type="checkbox" class="check" {{#checkSelector marketing "1"}} checked="checked" {{/checkSelector}} name="marketing” id="marketing” value="1" checked>
+       
+            <span>Public Relations: </span><input type="checkbox" class="check" {{#checkSelector public_relations "1"}} checked="checked" {{/checkSelector}} name="public_relations” id="public_relations” value="1" checked>
+
+            <span>Digital Media: </span><input type="checkbox" class="check" {{#checkSelector digital_media "1"}} checked="checked" {{/checkSelector}} name="digital_media” id="digital_media” value="1" checked>
+
+           <span>Customer Service: </span><input type="checkbox" class="check" {{#checkSelector customer_service "1"}} checked="checked" {{/checkSelector}} name="customer_service” id="customer_service” value="1" checked>
+
+            <span> Technology Support: </span><input type="checkbox" class="check" {{#checkSelector technology_support "1"}} checked="checked" {{/checkSelector}} name="technology_support” id="technology_support” value="1" checked>
+
+            <span> Tech Support:</span><input type="checkbox" class="check" {{#checkSelector tech_support "1"}} checked="checked" {{/checkSelector}} name="tech_support” id="tech_support” value="1" checked>
+            </div>
+
+     
+            <label >Commercial & Operations</label>
+            <div id="checkbox_commercial">
+             <span>Sales Analysis: <input type="checkbox" class="check"  {{#checkSelector sales_analysis "1"}} checked="checked" {{/checkSelector}} name="sales_analysis" id="sales_analysis" value="1" checked>
+         
+             <span>Sales Hunter: </span><input type="checkbox" class="check"  {{#checkSelector sales_hunter "1"}} checked="checked" {{/checkSelector}} name="sales_hunter" id="sales_hunter" value="1" checked>
+
+             <span>Sales Sme’s: <input type="checkbox" class="check"  {{#checkSelector sales_sme’s "1"}} checked="checked" {{/checkSelector}} name="sales_sme’s" id="sales_sme’s" value="1" checked>
+
+             <span>Sales Enterprise: </span><input type="checkbox" class="check"  {{#checkSelector sales_enterprise "1"}} checked="checked" {{/checkSelector}} name="sales_enterprise" id="sales_enterprise" value="1" checked>
+
+             <span>Sales Advertising: </span><input type="checkbox" class="check"  {{#checkSelector sales_advertising "1"}} checked="checked" {{/checkSelector}} name="sales_advertising" id="sales_advertising" value="1" checked></div>
+
+            <div id="checkbox_tec"><label>Technology</label>
+             <span>Sales Education: </span><input type="checkbox" class="check"  {{#checkSelector sales_education "1"}} checked="checked" {{/checkSelector}} name="sales_education" id="sales_education" value="1" checked>
+
+             <span>Software Development: </span><input type="checkbox" class="check"  {{#checkSelector software_development "1"}} checked="checked" {{/checkSelector}} name="software_development" id="software_development" value="1" checked>
+        
+             <span>Mobile Apps: </span><input type="checkbox" class="check"  {{#checkSelector mobile_apps "1"}} checked="checked" {{/checkSelector}} name="mobile_apps" id="mobile_apps" value="1" checked>
+
+             <span>Data Engineering: </span><input type="checkbox" class="check"  {{#checkSelector data_engineering "1"}} checked="checked" {{/checkSelector}} name="data_engineering" id="data_engineering" value="1" checked>
+
+             <span>Infraetructure: </span><input type="checkbox" class="check"  {{#checkSelector infraetructure "1"}} checked="checked" {{/checkSelector}} name="infraetructure" id="infraetructure" value="1" checked>
+ 
+             <span>Data Center: </span><input type="checkbox" class="check"  {{#checkSelector data_center "1"}} checked="checked" {{/checkSelector}} name="data_center" id="data_center" value="1" checked></div>
+
+            <div id="checkbox_product"><label>Product</label>
+             <span>Design: </span><input type="checkbox" class="check"  {{#checkSelector design "1"}} checked="checked" {{/checkSelector}} name="design" id="design" value="1" checked>
+
+            <span> User Experience:</span> <input type="checkbox" class="check"  {{#checkSelector user_experience "1"}} checked="checked" {{/checkSelector}} name="user_experience" id="user_experience" value="1" checked>
+            
+             <span>Data Analyst:</span><input type="checkbox" class="check"  {{#checkSelector data_analyst "1"}} checked="checked" {{/checkSelector}} name="data_analyst" id="data_analyst" value="1" checked>
+
+             <span>Product: </span><input type="checkbox" class="check"  {{#checkSelector product "1"}} checked="checked" {{/checkSelector}} name="product" id="product" value="1" checked></div>
+
+             </div></div>
+         </div>
+
           
           <label class="subtitulo">Movility</label>
           <div class="form-group">
@@ -243,6 +323,12 @@
         <h1 class="section-header">
             COMPETENCIES
         </h1>
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
         <div id="leftcontent">
         <div class="form-group">
           <label>1</label>
@@ -305,6 +391,12 @@
         <h1 class="section-header">
             SUCESSORS
         </h1>
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
           <div id="leftcontent">
              <div class="subtitulo">
                 <label>Option 1</label>
@@ -403,8 +495,6 @@
          <button type="submit" class="save">Save</button>
       </div>
 
-        
-              
         </div>
               </form>  
 

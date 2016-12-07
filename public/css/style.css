@@ -348,3 +348,49 @@ div#btn_save {
 	color: #337ab7;
 	font-size: 16px;
 }
+.titleleft{
+   width: 65%;
+   height: 45px;
+   float: left;
+   font-size: 14px;
+   color: #9B9B9B ;
+   text-align: center;
+   margin: 20px 0;
+}
+
+.titleright{
+   width: 28%;
+   height: 45px;
+   float: right;
+   font-size: 14px;
+   color: #9B9B9B ;
+   text-align: center;
+   margin: 20px;
+}
+div#checks_seccion1 {
+    width: 145px;
+    height: 110px;
+    float: left;
+}
+div#checks_seccion2 {
+    width: 145px;
+    height: 110px;
+    float: left;
+}
+div#checks_seccion3 {
+    width: 145px;
+    height: 110px;
+    float: left;
+}
+div#checks {
+    font-weight: 700;
+    border-bottom: 2px solid #777;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 19px;
+    margin-bottom: 20px;
+}
+div#checkbox_areas {
+    width: 173px;
+    height: 200px;
+}
