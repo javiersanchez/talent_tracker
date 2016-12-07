@@ -41,7 +41,8 @@
             <input type="text" name="area" id="area" vaue="{{area}}" class="general">
           </div>
           
-            <div class="form-group row">
+          
+            <div class="form-group">
             <label for="potential">potential:</label>
             <div class="shape">
               <select class="form-control" id="potential" name="potential">
@@ -140,8 +141,8 @@
             CAREER ASPIRATIONS
         </h1>
         <div id="leftcontent">
+                 <div><label class="subtitulo">Business Units</label></div>
          <div class="form-group">
-              <label>Business Units</label>
               <div>
               Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
               Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
@@ -157,8 +158,8 @@
               </div>
           </div>
 
+          <label class="subtitulo">Areas Of Interest</label>
           <div class="form-group">
-              <label>Areas Of Interest</label>
               <div>
               Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
               Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
@@ -173,9 +174,10 @@
               IT: <input type="checkbox" class="check" name="it" id="it" value="1" checked>
               </div>
           </div>
-
+          
+          <label class="subtitulo">Movility</label>
           <div class="form-group">
-              <label>Movility</label>
+ 
             <label for="movement_time_areas_interest" id="movement_time_areas_interest">Movement time for areas of interest:</label>
             <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
@@ -304,11 +306,10 @@
             SUCESSORS
         </h1>
           <div id="leftcontent">
-          <div class="form-group">
-              <div class="txt_option">
+             <div class="subtitulo">
                 <label>Option 1</label>
               </div>
-
+          <div class="form-group">
               <label for="impact_loss">Sucesors:</label>
               <div class="shape">
               <select class="form-control" data-with="impact_loss" id="succesor_a" name="succesor_a">
@@ -330,14 +331,17 @@
               </div>
 
               <label for="txt_sucesor_a">Comments:</label>
-              <textarea  name="txt_sucesor_a" id="" rows="50" cols="50" value=""></textarea>
+              <textarea  name="txt_sucesor_a" id="" rows="10" cols="50" value=""></textarea>
         </div>
 
+         <div class="subtitulo">
+              <label>Option 2</label>
+         </div>
+
         <div class="form-group">
-              <div class="txt_option">
-                <label>Option 2</label>
-              </div>
+              <div id="select">
               <label for="impact_loss">Sucesors:</label>
+              </div>
               <div class="shape">
               <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
               <option value="fdgdf343df">fdgdf343df</option>
@@ -358,13 +362,12 @@
               </div>
 
                <label for="txt_sucesor_b">Comments:</label>
-              <textarea  name="txt_sucesor_b" id="" rows="50" cols="50" value=""></textarea>
+              <textarea  name="txt_sucesor_b" id="" rows="10" cols="50" value=""></textarea>
+        </div>
+         <div class="subtitulo">
+              <label>Option 3</label>
         </div>
         <div class="form-group">
-              <div class="txt_option">
-                <label>Option 3</label>
-              </div>
-
               <label for="impact_loss">Sucesors:</label>
               <div class="shape">
               <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
@@ -386,7 +389,7 @@
               </div>
 
               <label for="txt_sucesor_c">Comments:</label>
-              <textarea  name="txt_sucesor_c" id="" rows="50" cols="50" value=""></textarea>
+              <textarea  name="txt_sucesor_c" id="" rows="10" cols="50" value=""></textarea>
         </div>
         </div>
 

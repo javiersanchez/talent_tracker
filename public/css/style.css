@@ -260,7 +260,7 @@ color: #FFFFFF;
 }
 
 .shape {
-	width: 200px;
+	width: 185px;
 	height: 35px;
 	border-radius: 3px;
 	border:solid 1px #B7BCC0;
@@ -291,8 +291,8 @@ color: #FFFFFF;
 	width: 20px;
 	height: 20px;
 	border: solid 1px #B7BCC0;
-	float: left;
-    border-radius: 3px;
+	/* float: left; */
+	border-radius: 3px;
 }
 
 
@@ -334,4 +334,12 @@ div#btn_save {
 .textArea{
 	width: 370px;
 	height: 146px;
+}
+.form-group label {
+    float: left;
+    margin: 5px 20px;
+}
+.subtitulo{
+	color: #337ab7;
+	font-size: 16px;
 }
