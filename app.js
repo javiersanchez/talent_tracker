@@ -8,6 +8,8 @@ var mime = require('mime');
 
 var pdf = require('html-pdf');
 
+var http = require('http');
+
 firebase = require('firebase');
 var config = {
   apiKey: "AIzaSyDoRCqwF3xxMIh3AuzU4mQtvZ6i-n0xGuc",
@@ -149,6 +151,16 @@ app.post('/create', function (req, res) {
   res.send(person);
 })
 
+app.get('/pdf/:id', function (req, res){
+
+var request = require('request');
+
+request({uri: 'http://localhost:3000/view/123'}, function(err, response, body){
+  console.log(body);
+});
+
+})
+
 app.get('/edit/:id', function (req, res) {
   if(req.cookies.uid) {
     return res.render("create"); 
@@ -246,25 +258,37 @@ app.get("/get_pdf/:id",function(req,res){
    "succesor_b": "fdgdf343df",
    "succesor_c": "dfeferfe45"
     }
-    
+
+    res.send('<script>window.location="http://www.html2pdf.it/?url=http://localhost:3000/view/123"</script>');
+
     //Generamos el HTML
     //console.log(__dirname + "/views/view.handlebars");
-    var template = handlebars.render(__dirname + "/views/view.handlebars", context);
+    /*var template = handlebars.render(__dirname + "/views/view.handlebars", context);
     for(var t in template){
         console.log(template[t]);
-    }
+    }*/
     /*fs.writeFile(context.name + ".html",handlebars.renderView(template), function(err){
         if(err){
             return console.log(err);
         }
     });*/
-    fs.writeFileSync(context.name + ".html",template);
+    //fs.writeFileSync(context.name + ".html",template);
     
     //Generamos el PDF
-    var html = fs.readFileSync(__dirname + '/' + context.name + ".html", 'utf8');
-    var options = { format: 'Letter' };
+    //var html = fs.readFileSync(__dirname + '/' + context.name + ".html", 'utf8');
+    /*var options = { format: 'Letter' };
 
-    pdf.create(html, options).toFile(__dirname + '/' + context.name + ".pdf", function(err, res) {
+    var request = require('request');
+
+    var html = "Hola";
+    request({uri: 'http://localhost:3000/view/123'}, function(err, response, body){
+      html = body;
+      //console.log(html);
+    });
+
+    console.log(html);
+
+    pdf.create(html.toString(), options).toFile(__dirname + '/' + context.name + ".pdf", function(err, res) {
       if (err) return console.log(err);
       //console.log(res); // { filename: '/app/businesscard.pdf' } 
     });
@@ -279,6 +303,12 @@ app.get("/get_pdf/:id",function(req,res){
   res.setHeader('Content-disposition', 'attachment; filename=' + filename);
   res.setHeader('Content-type', mimetype);
 
+<<<<<<< HEAD
+  var filestream = fs.createReadStream(file);
+  filestream.pipe(res);*/
+    
+    //res.redirect("/view/12345"); //TODO PONER LOS IDS DINAMICOS
+    
   // var filestream = fs.createReadStream(file);
   //filestream.pipe(res);
 
