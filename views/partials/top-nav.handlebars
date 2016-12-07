@@ -1,16 +1,10 @@
-
 <header>
   <div id="containergeneral">
-  <div class="logo"><img src="/images/logo.png"/></div>
-  <div class="logout" id="lnkLogout" hidden><a href="/logout">Logout</a></div>
-  <div class="user" id="divUser" hidden>{{user}} /</div>
+    <div class="logo"><img src="/images/logo.png" /></div>
+    <div class="logout" id="lnkLogout" hidden><a href="/logout">Logout</a></div>
+    <div class="user" id="divUser" hidden>{{user}} /</div>
   </div>
   <script>
-    if(getCookie('uid') != "") {
-      $('#lnkLogout').show();
-      $('#divUser').show();
-    }
-
     function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');
@@ -25,7 +19,11 @@
         }
         return "";
       } 
+
+    if(getCookie('uid') != "") {
+      $('#lnkLogout').show();
+      $('#divUser').show();
+    }
+
   </script>
- </header>
-
-
+</header>

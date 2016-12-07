@@ -79,7 +79,6 @@ app.get('/login', function (req, res) {
 })
 
 app.post('/login', function (req, res) {
-
   var user = req.body.h_user;
   var uid = req.body.h_uid;
   var email = req.body.h_email;
@@ -91,7 +90,6 @@ app.post('/login', function (req, res) {
 	usuario.child(uid).once('value', function(snapshot) {	
 		if(!snapshot.val()) {
 			var objUser = {"username": user, "useremail":email, "profile_picture": photo};
-			console.log(objUser);
 			usuario.child(uid).set(objUser);
 		}				
 	});
@@ -132,33 +130,43 @@ app.post('/search_result', function (req, res) {
 })
 
 app.get('/create', function (req, res) {
-  console.log("cookie: "+req.cookies.uid);
-  res.render("create");
+  if(req.cookies.uid) {
+    return res.render("create"); 
+  }
+  res.redirect("/login")
 });
 
 app.post('/create', function (req, res) {
+  if(req.cookies.uid) {
+    return res.render("create"); 
+  }
   var person = req.body;
   /*
   var db = firebase.database();		
   var tabla = db.ref().child("partners");	
-  tabla.push().set( {
-      name: person.tName,
-      job_position: req.body.tPosition,
-      area_of_interest : req.body.tArea
-  });
+  tabla.push().set(person);
   */
   res.send(person);
 })
 
 app.get('/edit/:id', function (req, res) {
+  if(req.cookies.uid) {
+    return res.render("create"); 
+  }
   res.send('Hello World!')
 })
 
 app.post('/edit/:id', function (req, res) {
+  if(req.cookies.uid) {
+    return res.render("create"); 
+  }
   res.send('Hello World!')
 })
 
 app.get('/view/:id', function (req, res) {
+  if(req.cookies.uid) {
+    return res.render("create"); 
+  }
 
     var context = {"name": "Marco Gallen",
    "job_position": "Product manager",
@@ -196,11 +204,17 @@ app.get('/view/:id', function (req, res) {
 })
 
 app.post('/view/:id', function (req, res) {
+  if(req.cookies.uid) {
+    return res.render("create"); 
+  }
   res.send('Hello World!')
 })
 
 
 app.get("/get_pdf/:id",function(req,res){
+  if(req.cookies.uid) {
+    return res.render("create"); 
+  }
     var context = {"name": "Marco Gallen",
    "job_position": "Product manager",
    "area": "Product",
