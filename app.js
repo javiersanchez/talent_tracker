@@ -1,6 +1,11 @@
 var express = require('express');
 var app = express();
 
+var fs = require('fs');
+
+var path = require('path');
+var mime = require('mime');
+
 firebase = require('firebase');
 var config = {
     apiKey: "AIzaSyDoRCqwF3xxMIh3AuzU4mQtvZ6i-n0xGuc",
@@ -26,7 +31,20 @@ var handlebars = require('express-handlebars').create( {
           if(!this._sections) this._sections = {};
           this._sections[name] = options.fn(this);
           return null;
-      }
+      },
+        checkSelector: function(v1, v2, options){
+            console.log(v1);
+            console.log(v2);
+            if(v1 == v2){ 
+                console.log(options.fn(this));
+                return options.fn(this);
+            }else {
+                console.log(options.inverse(this));
+                //return options.inverse(this);    
+                return null;
+            }
+            
+        }
     }
     });
 
@@ -94,6 +112,45 @@ app.get('/create', function (req, res) {
    // res.send(form)
     //res.render('create');
     */
+    
+    /*var partner = {
+ 
+   "name": "Marco Gallen",
+   "job_position": "Product manager",
+   "area": "Product",
+   "potential": "High",
+   "career": "Management",
+   "status": "Do not apply",
+   "key_contributor": "1",
+   "specialist_critical": "1",
+   "probability_of_loss": "High",
+   "impact_loss": "High",
+   "areas_to_develop": "Product design usability",
+   "strengths": "Patience leadership",
+   "relevant_technical_knowledge": "Hirer knowledge",
+   "commercial": "1",
+   "marketing": "1",
+   "administration": "1",
+   "finance": "1",
+   "human_resources": "1",
+   "product": "1",
+   "it": "1",
+   "movement_time_areas_interest": "Inmediate",
+   "movement_time_international_mobility": "Inmediate",
+   "possibility_of_development": "Do not apply",
+   "time_development_movement_possibility": "Do not apply",
+   "representation": "5",
+   "strategic_vision": "5",
+   "business_understanding": "5",
+   "succesor_a": "ergerg5445",
+   "succesor_b": "fdgdf343df",
+   "succesor_c": "dfeferfe45"
+ }
+    var db = firebase.database();		
+    var tabla = db.ref().child("partners");	
+    tabla.push().set(partner);*/
+
+    
 
   //res.send('Hello World!')2
    // var context = {name:"Marco", user:"Julius Papagorgio"};
@@ -125,13 +182,97 @@ app.post('/edit/:id', function (req, res) {
 })
 
 app.get('/view/:id', function (req, res) {
-    res.render("view");
+    var context = {"name": "Marco Gallen",
+   "job_position": "Product manager",
+   "area": "Product",
+   "potential": "High",
+   "career": "Management",
+   "status": "Do not apply",
+   "key_contributor": "1",
+   "specialist_critical": "1",
+   "probability_of_loss": "High",
+   "impact_loss": "High",
+   "areas_to_develop": "Product design usability",
+   "strengths": "Patience leadership",
+   "relevant_technical_knowledge": "Hirer knowledge",
+   "commercial": "1",
+   "marketing": "1",
+   "administration": "1",
+   "finance": "1",
+   "human_resources": "1",
+   "product": "1",
+   "it": "1",
+   "movement_time_areas_interest": "Inmediate",
+   "movement_time_international_mobility": "Inmediate",
+   "possibility_of_development": "Do not apply",
+   "time_development_movement_possibility": "Do not apply",
+   "representation": "5",
+   "strategic_vision": "5",
+   "business_understanding": "5",
+   "succesor_a": "ergerg5445",
+   "succesor_b": "fdgdf343df",
+   "succesor_c": "dfeferfe45"
+    }
+    res.render("view", context);
   //res.send('Hello World!')
 })
 
 app.post('/view/:id', function (req, res) {
   res.send('Hello World!')
 })
+
+app.get("/get_pdf/:id",function(req,res){
+    var context = {"name": "Marco Gallen",
+   "job_position": "Product manager",
+   "area": "Product",
+   "potential": "High",
+   "career": "Management",
+   "status": "Do not apply",
+   "key_contributor": "1",
+   "specialist_critical": "1",
+   "probability_of_loss": "High",
+   "impact_loss": "High",
+   "areas_to_develop": "Product design usability",
+   "strengths": "Patience leadership",
+   "relevant_technical_knowledge": "Hirer knowledge",
+   "commercial": "1",
+   "marketing": "1",
+   "administration": "1",
+   "finance": "1",
+   "human_resources": "1",
+   "product": "1",
+   "it": "1",
+   "movement_time_areas_interest": "Inmediate",
+   "movement_time_international_mobility": "Inmediate",
+   "possibility_of_development": "Do not apply",
+   "time_development_movement_possibility": "Do not apply",
+   "representation": "5",
+   "strategic_vision": "5",
+   "business_understanding": "5",
+   "succesor_a": "ergerg5445",
+   "succesor_b": "fdgdf343df",
+   "succesor_c": "dfeferfe45"
+    }
+    
+    fs.writeFile(context.name + ".txt",context, function(err){
+        if(err){
+            return console.log(err);
+        }
+    });
+    //res.send("DONE");
+    
+    var file = __dirname + '/' + context.name + ".txt";
+
+  var filename = path.basename(file);
+  var mimetype = mime.lookup(file);
+
+  res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+  res.setHeader('Content-type', mimetype);
+
+  var filestream = fs.createReadStream(file);
+  filestream.pipe(res);
+    
+});
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
