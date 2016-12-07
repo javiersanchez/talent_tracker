@@ -74,9 +74,9 @@ BUTTON.btn-load {
 /*HEADER SECTION */
 H1.section-header {
     font-weight:bold;
-    background:#EDEDED;
+    background:#D3DEE3;
     width:100%;
-    padding:0 0 10px 0;
+    padding:10px 0 10px 0;
     text-align:center;
     font-size:21px;
 }
@@ -108,20 +108,21 @@ nav menu CSS FOR SHOW HIDING ELEMENTS
     
 }
 .encabezado{
-height: 20px;    
+height: 32px;    
 background: #F6F6F6 ;
-font-family: Avenir-Heavy;
 font-size: 14px;
 color: #4A4A4A ;
 line-height: 18px;
 text-align: center;
 padding: 7px 0;
+margin-bottom: 30px;
+font-weight: 600;
 }
 
 .titulo{
     /* Business Unit: */
 /*font-family: Avenir-Heavy;*/
-font-size: 16px;
+font-size: 20px;
 color: #9B9B9B ;
 line-height: 18px;
 }
@@ -132,8 +133,11 @@ line-height: 18px;
 
 .cpdf{
 /* Hight: */
-font-family: Avenir-Book;
 font-size: 14px;
 color: #4A4A4A ;
 line-height: 18px;
+}
+
+H4.tpdf {
+    font-weight:bold;
 }
