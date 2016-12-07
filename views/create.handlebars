@@ -1,10 +1,11 @@
 {{> top-nav}}
+    {{> search-bar}}
 
     <div class="container sec-busqueda">
         
     <div class="row">
         <div class="col-lg-8">
-    {{> search-bar}}
+
 
         </div>
         <div class="col-lg-4">
@@ -63,12 +64,12 @@
           <div class="form-group">
             <label for="status" id="tipo_ubicacion">Status:</label>
             <select class="form-control" data-with="Do not apply" id="status" name="status">
-              <option>Next To Retirement</option>
-              <option>Recent Entry</option>
-              <option>Attitude Problems</option>
-              <option>Inability</option>
-              <option>Recent Movement</option>
-              <option selected="">Do NoT Apply</option>
+              <option value="Next To Retirement">Next To Retirement</option>
+              <option value="Recent Entry">Recent Entry</option>
+              <option value="Attitude Problems">Attitude Problems</option>
+              <option value="Inability">Inability</option>
+              <option value="Recent Movement">Recent Movement</option>
+              <option value="Do Not Apply" selected="">Do Not Apply</option>
             </select>
           </div>
 
@@ -80,9 +81,19 @@
           <div class="form-group">
             <label for="probability_of_loss">Probability Of Loss:</label>
             <select class="form-control" data-with="probability_of_loss" id="probability_of_loss" name="probability_of_loss">
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            </div>
+
+
+          <div class="form-group">
+            <label for="impact_loss">Impact Loss:</label>
+            <select class="form-control" data-with="impact_loss" id="impact_loss" name="impact_loss">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
             </select>
             </div>
 
@@ -99,8 +110,15 @@
         <div class="form-group">
         <label for="relevant_technical_knowledge">Impact Loss</label>
          <textarea  name="relevant_technical_knowledge" id="relevant_technical_knowledge" rows="10" cols="50" value="{{relevant_technical_knowledge}}"></textarea>
-        
-               <button type="submit">Save</button>
+         
+         <div id="btn_cancel">
+               <button type="submit">Cancel</button>
+         </div>
+
+        <div id="btn_save">
+           <button type="submit">Save</button>
+       </div>
+
         </div>
               </div>
         <div class="mpanel pan-invisible" id="ca">
