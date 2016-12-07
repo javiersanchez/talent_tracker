@@ -112,7 +112,6 @@ text-align: center;
 	float: right;
 	border-radius: 50px;
 	margin: 11px 30px;
-
 }
 
 .datos{
@@ -120,7 +119,6 @@ text-align: center;
 	color: #FFFFFF;
 	text-align: right;
 	margin: 22px 0;
-
 }
 
 
@@ -221,14 +219,14 @@ background: #28B8AC;
 .save{
 	width: 80%;
 	height: 40px;
-background: #2CCCBF;
-text-align: center;
-border-radius: 3px;
-font-family: Avenir-Heavy;
-font-size: 21px;
-color: #FFFFFF;
-float:left;
-margin: 20px 10%;
+	background: #2CCCBF;
+	text-align: center;
+	border-radius: 3px;
+	/* font-family: Avenir-Heavy; */
+	font-size: 21px;
+	color: #FFFFFF;
+	float:left;
+	margin: 20px 10%;
 }
 
 .save:hover{
@@ -239,14 +237,14 @@ background: #28B8AC;
 	width: 430px;
 	height: 40px;
 	background-color: transparent;
-text-align: center;
-border-radius: 3px;
-border:solid 1px #2CCCBF;
-font-family: Avenir-Heavy;
-font-size: 21px;
-float: left;
-color: #2CCCBF;
-margin: 20px;
+	text-align: center;
+	border-radius: 3px;
+	border:solid 1px #2CCCBF;
+	/* font-family: Avenir-Heavy; */
+	font-size: 21px;
+	float: left;
+	color: #2CCCBF;
+	margin: 20px;
 }
 
 .cancel:hover{
@@ -262,14 +260,14 @@ color: #FFFFFF;
 }
 
 .shape {
-	width: 300px;
+	width: 200px;
 	height: 35px;
 	border-radius: 3px;
 	border:solid 1px #B7BCC0;
-    margin: 30px 20px 10px 20px;
-    overflow: hidden;
-    background: url("../images/shape.png") no-repeat 100% center;
- }
+	/* margin: 30px 20px 10px 20px; */
+	overflow: hidden;
+	background: url("../images/shape.png") no-repeat 100% center;
+	}
 
 
 .shape select {
@@ -286,6 +284,7 @@ color: #FFFFFF;
     font-size: 14px;
     font-family: Avenir-Book;
     color: #4A4A4A;
+    display: inline-block;
 }
 
 .check {
@@ -312,17 +311,27 @@ div#btn_save {
     float: left;
 }
 #rightcontent{
-    width: 30%;
-    height: 500px;
+    width: 28%;
+    height: auto;
    background: #FFFFFF ;
    box-shadow: 0 2px 3px 0 rgba(95,95,95,0.50);
    border-radius: 8px;
    float: right;
    margin: 20px;
+   font-size: 14px;
+   color: #4A4A4A ;
+   line-height: 18px;
+   padding: 32px 17px;
 }
 
 #leftcontent{
-    width: 70%;
+    width: 65%;
     height: auto;
-   float: left;
+    float: left;
+}
+
+
+.textArea{
+	width: 370px;
+	height: 146px;
 }
