@@ -7,13 +7,14 @@
      </h1>
     <div class="row">
         <div class="col-lg-6">
-            <img src="/svg/logo.svg" alt="Talent tracker">
+            <img src="/images/logopdf.png" alt="Talent tracker">
         </div>
         <div class="col-lg-6" style="border:1px solid #FF000;">
             <div class="resultadobusqueda pull-right">
              <div class="foto">
+             <img src="/images/avatar.png"/>
              </div>
-             <div class="datos">
+             <div class="datospdf">
                {{name}}
               {{job_position}}
               {{area}}
@@ -121,8 +122,9 @@
      </div>
     <div class="row">
         <div class="col-lg-4">
+
         
-        <h3 class="title">Business Unit</h3>
+        <h3 class="titulo">Business Unit</h3>
 
 {{#checkSelector comercial "1"}}
            <div class="row">
@@ -204,12 +206,13 @@
         </div>
         <div class="col-lg-4">
            
+
             
             <!----- END ORIGINAL --->
             
 
 
-            <h3 class="title">Areas of interest</h3>
+            <h3 class="titulo">Areas of interest</h3>
 
            
                <h4 class="tpdf">Administration</h4>
@@ -556,7 +559,7 @@
             
         </div>
         <div class="col-lg-4">
-            <h3 class="title">Mobility</h3>
+            <h3 class="titulo">Mobility</h3>
             <p class="tpdf">Movement time for areas of interest:</p>
             <p>{{movement_time_areas_interest}}</p>
             <p  class="tpdf">Movement time for international mobility:</p>
@@ -569,7 +572,7 @@
     <div class="encabezado">
             COMPETENCIES
      </div>
-    <h3 class="title">Organization Skills</h3>
+    <h3 class="titulo">Organization Skills</h3>
     <div class="row">
         <div class="col-lg-3 tpdf">
             Representation
@@ -594,7 +597,7 @@
     <div class="encabezado">
             SUCESSORS
      </div>
-    <h3 class="title">Option A</h3>
+    <h3 class="titulo">Option A</h3>
     <div class="row">
         <div class="col-lg-3 tpdf">
             Sucessor
@@ -614,7 +617,7 @@
         <div class="col-lg-9">{{comments_a}}</div>
     </div>
             
-            <h3 class="title">Option B</h3>
+            <h3 class="titulo">Option B</h3>
     <div class="row">
         <div class="col-lg-3 tpdf">
             Sucessor
@@ -634,7 +637,7 @@
         <div class="col-lg-9">{{comments_b}}</div>
     </div>
             
-            <h3 class="title">Option C</h3>
+            <h3 class="titulo">Option C</h3>
     <div class="row">
         <div class="col-lg-3 tpdf">
             Sucessor
@@ -656,6 +659,16 @@
             
             
         </div>
-<!--end--> 
-        <a href="/get_pdf/1234">Descargar PDF</a>
+<!--end-->        
 </div>
+
+<div class="row">
+   <div class="col-lg-6">
+   </div>
+   <div class="col-lg-6">
+        <button type="submit" class="save">Download PDF</button>
+   </div>
+</div>
+
+
+
