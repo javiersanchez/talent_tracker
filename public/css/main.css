@@ -30,7 +30,7 @@ BUTTON{
     background:#2DCBBF;
     color:#FFFFFF;
     border:none;
-    padding:10px;
+    /* padding:10px; */
     min-width:60px;
     border-radius:5px;
 }
