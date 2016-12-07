@@ -94,3 +94,51 @@ nav menu CSS FOR SHOW HIDING ELEMENTS
     display:none;
 }
 
+/** view/:id **/
+
+.view-container {
+    background:#FFFFFF;
+    color:#4A4A4A;
+}
+
+.view-panel{
+    padding:10px 20px;
+    border:none;
+    
+    
+}
+.encabezado{
+height: 20px;    
+background: #F6F6F6 ;
+font-family: Avenir-Heavy;
+font-size: 14px;
+color: #4A4A4A ;
+line-height: 18px;
+text-align: center;
+padding: 7px 0;
+}
+
+.titulo{
+    /* Business Unit: */
+/*font-family: Avenir-Heavy;*/
+font-size: 16px;
+color: #9B9B9B ;
+line-height: 18px;
+}
+
+
+.tpdf{
+/* Potencial:: */
+font-family: Avenir-Heavy;
+font-size: 14px;
+color: #4A4A4A ;
+line-height: 18px;
+}
+
+.cpdf{
+/* Hight: */
+font-family: Avenir-Book;
+font-size: 14px;
+color: #4A4A4A ;
+line-height: 18px;
+}
