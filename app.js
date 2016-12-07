@@ -75,29 +75,6 @@ app.post('/search_result', function (req, res) {
 })
 
 app.get('/create', function (req, res) {
-<<<<<<< HEAD
-=======
-    
- /*
-  var tName= "tName";
-    var tPosition= "tPosition";
-    var tArea= "tArea";
-    var btnSave= "btnSave";
-    var form= '<form action="/create" method="post">'
-            + '<label for="'+tName+'">Name</label><br/>'
-            + '<input id="'+tName+'" name="'+tName+'" type="text" /><br/>'
-            + '<label for="'+tPosition+'">Position</label><br/>'
-            + '<input id="'+tPosition+'" name="'+tPosition+'" type="text" /><br/>'
-            + '<label for="'+tName+'">Area of interest</label><br/>'
-            + '<input id="'+tArea+'" name="'+tArea+'" type="text" /><br/>'
-            + '<button id="'+btnSave+'" name="'+btnSave+'" type="submit">Save</button><br/>'
-            + '</form>'
-   // res.send(form)
-    //res.render('create');
-    */
-
-  //res.send('Hello World!')2
->>>>>>> cbebdb8a76442cd2b7f1c2d5e448bded22dd5616
     var context = {name:"Marco", user:"Julius Papagorgio"};
     res.render("create", context);
 })
