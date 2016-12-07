@@ -22,7 +22,7 @@ var admin = require("firebase-admin");
 var serviceAccount = require("./Talent_Tracker-73b9d4607dd9.json");
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert("./Talent_Tracker-73b9d4607dd9.json"),
   databaseURL: "https://talent-tracker-be199.firebaseio.com"
 });
 
@@ -57,11 +57,6 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(require('cookie-parser')("This is secret"));
-
-app.get('/', function (req, res) {
-  res.redirect('/login')
-})
-
 //Asignar ruta publica pra elementos estaticos
 app.use(express.static(__dirname + "/public"));
 
@@ -74,8 +69,13 @@ app.use(function(req,res,next){
 app.get("/", function (req, res) {
   res.redirect("/login");
 });
+
 app.get('/login', function (req, res) {
-  res.render('login');
+  if (req.cookies.uid) {
+    res.redirect('/create');
+  } else {
+    res.render('login');
+  }
 })
 
 app.post('/login', function (req, res) {
@@ -84,38 +84,32 @@ app.post('/login', function (req, res) {
   var uid = req.body.h_uid;
   var email = req.body.h_email;
   var photo = req.body.h_photo;
-
-  // Send to firebase
-  firebase.database().ref('users/' + uid).set({
-    username: user,
-    email: email,
-    profile_picture: photo
-  });
-
-	/*
-  // Send to firebase.
-  usuario.child(uid).once('value', function(snapshot) {	
+  var db = firebase.database();		
+	var usuario = db.ref("users");
+	
+	 //En firebase
+	usuario.child(uid).once('value', function(snapshot) {	
 		if(!snapshot.val()) {
-			var objUser = {
-        "uid": uid, "username": user, "email": email,
-        "profile_picture": photo
-      };
+			var objUser = {"username": user, "useremail":email, "profile_picture": photo};
+			console.log(objUser);
 			usuario.child(uid).set(objUser);
-		}
-	});*/
-    console.log(user);
-  res.cookie('uid', uid);
-  res.cookie('user', user);
-  res.cookie('photo', photo);
-  return res.redirect('/create');
+		}				
+	});
+    res.cookie('uid',uid);
+    res.cookie('user',user);
+    res.cookie('photo',photo);
+    res.redirect('/create');
 });
 
-app.get("/logout", function(req, res){
-   firebase.auth().signOut().then(function() {
-    res.redirect("/login");
-}, function(error) {
-  // An error happened.
-}); 
+app.get("/logout", function(req, res) {
+    firebase.auth().signOut().then(function() {
+      res.clearCookie('uid')
+      res.clearCookie('user')
+      res.clearCookie('photo')
+      return res.redirect('/login');
+    }, function(error) {
+      return res.send('<script>lert("Ocurrió un error al cerrar la sesión.");</script>')
+    }); 
 });
 
 app.get('/search', function (req, res) {
@@ -138,6 +132,7 @@ app.post('/search_result', function (req, res) {
 })
 
 app.get('/create', function (req, res) {
+  console.log("cookie: "+req.cookies.uid);
   res.render("create");
 });
 
