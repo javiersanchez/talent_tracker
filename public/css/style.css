@@ -121,7 +121,12 @@ text-align: center;
 	margin: 22px 0;
 }
 
-
+.datospdf{
+	float: right;
+	color: #4A4A4A;
+	text-align: right;
+	margin: 22px 0;
+}
 
 
 ul{
@@ -207,9 +212,9 @@ input, button {
 background: #2CCCBF;
 text-align: center;
 border-radius: 3px;
-font-family: Avenir-Heavy;
 font-size: 21px;
 color: #FFFFFF;
+font-weight: 600;
 }
 
 .load:hover{
@@ -282,7 +287,7 @@ color: #FFFFFF;
     -moz-appearance: none;
     appearance: none;
     font-size: 14px;
-    font-family: Avenir-Book;
+    /* font-family: Avenir-Book; */
     color: #4A4A4A;
     display: inline-block;
 }
