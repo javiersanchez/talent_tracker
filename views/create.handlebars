@@ -5,8 +5,6 @@
         
     <div class="row">
         <div class="col-lg-8">
-
-
         </div>
         <div class="col-lg-4">
         <h4>Personita</h4>
@@ -62,7 +60,7 @@
           </div>
 
           <div class="form-group">
-            <label for="status" id="tipo_ubicacion">Status:</label>
+            <label for="status" id="status">Status:</label>
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Next To Retirement">Next To Retirement</option>
               <option value="Recent Entry">Recent Entry</option>
@@ -74,8 +72,8 @@
           </div>
 
          <div class="form-group">
-              <input type="checkbox" name="key_contributor" id="key_contributor" value="1"> Key contributor:<br>
-              <input type="checkbox" name="specialist_critical" id="specialist_critical" value="1" checked>Specialist Critical:<br>
+              <input type="checkbox" class="check" name="key_contributor" id="key_contributor" value="1"> Key contributor:
+              <input type="checkbox" class="check" name="specialist_critical" id="specialist_critical" value="1" checked>Specialist Critical:<br>
           </div>
 
           <div class="form-group">
@@ -115,21 +113,88 @@
                <button type="submit">Cancel</button>
          </div>
 
-        <div id="btn_save">
+         <div id="btn_save">
            <button type="submit">Save</button>
-       </div>
+         </div>
 
-        </div>
+         </div>
               </div>
         <div class="mpanel pan-invisible" id="ca">
               
         <h1 class="section-header">
             CAREER ASPIRATIONS
         </h1>
-           <div class="form-group">
-            <label class="control-label">Job position:</label>
-            <input type="text" name="aspiration_job_position"><br>
+          
+         <div class="form-group">
+              <label>Business Units</label>
+              <div>
+              Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
+              Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
+              Finance:<input type="checkbox" class="check" name="finance" id="finance" value="1" checked>
+              </div>
+              <div>
+              Administration:<input type="checkbox" class="check" name="administration" id="administration" value="1">
+              Human resources:<input type="checkbox" class="check" name="human_resources" id="human_resources" value="1"> 
+              </div>
+              <div>
+              Product: <input type="checkbox" class="check" name="product" id="product" value="1" checked>
+              IT: <input type="checkbox" class="check" name="it" id="it" value="1" checked>
+              </div>
           </div>
+
+          <div class="form-group">
+              <label>Areas Of Interest</label>
+              <div>
+              Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
+              Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
+              Finance:<input type="checkbox" class="check" name="finance" id="finance" value="1" checked>
+              </div>
+              <div>
+              Administration:<input type="checkbox" class="check" name="administration" id="administration" value="1">
+              Human resources:<input type="checkbox" class="check" name="human_resources" id="human_resources" value="1"> 
+              </div>
+              <div>
+              Product: <input type="checkbox" class="check" name="product" id="product" value="1" checked>
+              IT: <input type="checkbox" class="check" name="it" id="it" value="1" checked>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label>Movility</label>
+
+            <label for="movement_time_areas_interest" id="movement_time_areas_interest">Movement time for areas of interest:</label>
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+
+            <label for="possibility_of_development" id="possibility_of_development">Possibility of development:</label>
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <label for="movement_time_international_mobility" id="movement_time_international_mobility">Attitude Problems: </label>
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <label for="possibility_of_development" id="possibility_of_development">Time development movement possibility:</label>
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+            <div id="btn_cancel">
+               <button type="submit">Cancel</button>
+         </div>
+
+         <div id="btn_save">
+           <button type="submit">Save</button>
+         </div>
           
         </div>
         <div class="mpanel pan-invisible" id="com">
