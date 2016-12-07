@@ -24,43 +24,49 @@
         <h1 class="section-header">
             TALENT REVIEW
         </h1>
-          
+          <div id="leftcontent">
            <div class="form-group">
-            <label class="control-label">Name: </label>
-            <input type="text" name="name" id="name" value="{{name}}">
+            <label class="control-label tpdf"  >Name:</label>
+            <input type="text" name="name" id="name" value="{{name}}" class="general">
           </div>
 
           <div class="form-group">
-            <label class="control-label">Job position:</label>
-            <input type="text" name="job_position" id="job_position" value="{{job_position}}">
+            <label class="control-label tpdf">Job position:</label>
+            <input type="text" name="job_position" id="job_position" value="{{job_position}}" class="general">
             </div>
             
           <div class="form-group">
         
-            <label class="control-label">Área:</label>
-            <input type="text" name="area" id="area" vaue="{{area}}">
+            <label class="control-label tpdf">Área:</label>
+            <input type="text" name="area" id="area" vaue="{{area}}" class="general">
           </div>
+          
           
             <div class="form-group">
             <label for="potential">potential:</label>
+            <div class="shape">
               <select class="form-control" id="potential" name="potential">
                 <option value="high potencial" selected="">High potential</option>
                 <option value="potential">Potential</option>
                 <option value="consolidate" >Consolidated</option>
             </select>
             </div>
+            </div>
 
           <div class="form-group">
            <label for="career">Career:</label>
+           <div class="shape">
            <select class="form-control" id="career" name="career">
               <option selected="">Management</option>
               <option>Specialist</option>
               <option>Both</option>
             </select>
+            </div>
           </div>
 
           <div class="form-group">
             <label for="status" id="status">Status:</label>
+            <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Next To Retirement">Next To Retirement</option>
               <option value="Recent Entry">Recent Entry</option>
@@ -69,6 +75,7 @@
               <option value="Recent Movement">Recent Movement</option>
               <option value="Do Not Apply" selected="">Do Not Apply</option>
             </select>
+            </div>
           </div>
 
          <div class="form-group">
@@ -77,22 +84,26 @@
           </div>
 
           <div class="form-group">
-            <label for="probability_of_loss">Probability Of Loss:</label>
+            <label for="probability_of_loss" >Probability Of Loss:</label>
+            <div class="shape">
             <select class="form-control" data-with="probability_of_loss" id="probability_of_loss" name="probability_of_loss">
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
             </select>
             </div>
-
+            </div>
+           
 
           <div class="form-group">
             <label for="impact_loss">Impact Loss:</label>
+            <div class="shape">
             <select class="form-control" data-with="impact_loss" id="impact_loss" name="impact_loss">
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
             </select>
+            </div>
             </div>
 
         <div class="form-group">
@@ -108,25 +119,30 @@
         <div class="form-group">
         <label for="relevant_technical_knowledge">Impact Loss</label>
          <textarea  name="relevant_technical_knowledge" id="relevant_technical_knowledge" rows="10" cols="50" value="{{relevant_technical_knowledge}}"></textarea>
-         
-         <div id="btn_cancel">
-               <button type="submit" class="cancel">Cancel</button>
          </div>
 
-         <div id="btn_save">
-               <button type="submit" class="save">Save</button>
-         </div>
+      </div>        
 
-         </div>
-              </div>
+      <div id="rightcontent">
+      </div>
+
+      <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+      </div>
+      <div id="btn_save">
+         <button type="submit" class="save">Save</button>
+      </div>
+
+    </div>
+        
         <div class="mpanel pan-invisible" id="ca">
               
         <h1 class="section-header">
             CAREER ASPIRATIONS
         </h1>
-          
+        <div id="leftcontent">
+                 <div><label class="subtitulo">Business Units</label></div>
          <div class="form-group">
-              <label>Business Units</label>
               <div>
               Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
               Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
@@ -142,8 +158,8 @@
               </div>
           </div>
 
+          <label class="subtitulo">Areas Of Interest</label>
           <div class="form-group">
-              <label>Areas Of Interest</label>
               <div>
               Commercial: <input type="checkbox" class="check" name="commercial" id="commercial" value="1"> 
               Marketing: <input type="checkbox" class="check" name="marketing" id="marketing" value="1" checked>
@@ -158,10 +174,12 @@
               IT: <input type="checkbox" class="check" name="it" id="it" value="1" checked>
               </div>
           </div>
-
+          
+          <label class="subtitulo">Movility</label>
           <div class="form-group">
-              <label>Movility</label>
+ 
             <label for="movement_time_areas_interest" id="movement_time_areas_interest">Movement time for areas of interest:</label>
+            <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" selected >Inmediate</option>
               <option valu="Short Time: Now To 12 Months">Short Time: Now To 12 Months</option>
@@ -169,8 +187,10 @@
               <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
               <option valu="Do not apply">Do not apply</option>
             </select>
+            </div>
 
             <label for="possibility_of_development" id="possibility_of_development">Possibility of development:</label>
+            <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" selected >Inmediate</option>
               <option valu="Short Time: Now To 12 Months">Short Time: Now To 12 Months</option>
@@ -178,8 +198,10 @@
               <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
               <option valu="Do not apply">Do not apply</option>
             </select>
+            </div>
 
             <label for="movement_time_international_mobility" id="movement_time_international_mobility">Attitude Problems: </label>
+            <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" >Inmediate</option>
               <option value="Review Match Vs Job Position And Job Description" >Review Match Vs Job Position And Job Description</option>
@@ -188,7 +210,10 @@
               <option value="Resent Entry" >Resent Entry</option>
               <option valu="Do not apply" selected >Do not apply</option>
             </select>
+            </div>
+
             <label for="possibility_of_development" id="possibility_of_development">Time development movement possibility:</label>
+            <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" >Inmediate</option>
               <option value="Review Match Vs Job Position And Job Description" >Review Match Vs Job Position And Job Description</option>
@@ -197,156 +222,188 @@
               <option value="Resent Entry" >Resent Entry</option>
               <option valu="Do not apply" selected >Do not apply</option>
             </select>
+            </div>
           </div>
-        
-        <div id="btn_cancel">
-               <button type="submit" class="cancel">Cancel</button>
-         </div>
+          </div>
+       
+       <div id="rightcontent">
+        </div>
 
-         <div id="btn_save">
-               <button type="submit" class="save">Save</button>
-         </div>
-
+      <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+      </div>
+      <div id="btn_save">
+         <button type="submit" class="save">Save</button>
+      </div>
           
         </div>
+
         <div class="mpanel pan-invisible" id="com">
               
         <h1 class="section-header">
             COMPETENCIES
         </h1>
+        <div id="leftcontent">
         <div class="form-group">
-              <label>1</label>
-              <label for="impact_loss">Representation:</label>
-              <select class="form-control" data-with="impact_loss" id="representation" name="representation">
+          <label>1</label>
+            <label for="impact_loss">Representation:</label>
+            <div class="shape">
+            <select class="form-control" data-with="impact_loss" id="representation" name="representation">
               <option value="1">Level 1</option>
               <option value="2">Level 2</option>
               <option value="3">Level 3</option>
               <option value="4">Level 4</option>
               <option value="5" selected >Level 5</option>
-              </select>
+            </select>
+            </div>
         </div>
         <div class="form-group">
-              <label>2</label>
-              <label for="impact_loss">Representation:</label>
-              <select class="form-control" data-with="impact_loss" id="strategic_vision" name="strategic_vision">
+          <label>2</label>
+            <label for="impact_loss">Representation:</label>
+            <div class="shape">
+            <select class="form-control" data-with="impact_loss" id="strategic_vision" name="strategic_vision">
               <option value="1">Level 1</option>
               <option value="2">Level 2</option>
               <option value="3">Level 3</option>
               <option value="4">Level 4</option>
               <option value="5" selected >Level 5</option>
-              </select>
+            </select>
+            </div>
         </div>
         <div class="form-group">
-               <label>3</label>
-              <label for="impact_loss">Representation:</label>
-              <select class="form-control" data-with="impact_loss" id="business_understanding" name="business_understanding">
+           <label>3</label>
+            <label for="impact_loss">Representation:</label>
+            <div class="shape">
+            <select class="form-control" data-with="impact_loss" id="business_understanding" name="business_understanding">
               <option value="1">Level 1</option>
               <option value="2">Level 2</option>
               <option value="3">Level 3</option>
               <option value="4">Level 4</option>
               <option value="5" selected>Level 5</option>
-              </select>
+            </select>
+           </div>
+        </div>
+      </div>
+
+        <div id="rightcontent">
+        holi
         </div>
 
-         <div id="btn_cancel">
-               <button type="submit" class="cancel">Cancel</button>
-         </div>
-
-         <div id="btn_save">
-               <button type="submit" class="save">Save</button>
-         </div>
-
+        <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+        </div>
+        <div id="btn_save">
+           <button type="submit" class="save">Save</button>
+        </div>
                
         </div>
+
+
        
        <div class="mpanel pan-invisible" id="suc">
               
         <h1 class="section-header">
             SUCESSORS
         </h1>
-        
-       
-         <div class="form-group">
-              <div class="txt_option">
+          <div id="leftcontent">
+             <div class="subtitulo">
                 <label>Option 1</label>
               </div>
-
+          <div class="form-group">
               <label for="impact_loss">Sucesors:</label>
+              <div class="shape">
               <select class="form-control" data-with="impact_loss" id="succesor_a" name="succesor_a">
               <option ></option>
               <option ></option>
               <option ></option>
               <option ></option>
               </select>
-
-              <label for="impact_loss">Preparation Time:</label>
-              <select class="form-control" data-with="impact_loss" id="succesor_a" name="succesor_a">
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              </select>
-
-              <label for="strengths">Comments:</label>
-              <textarea  name="strengths" id="strengths" rows="50" cols="50" value="{{strengths}}"></textarea>
-        </div>
-
-              <div class="form-group">
-              <div class="txt_option">
-                <label>Option 2</label>
-              </div>
-              <label for="impact_loss">Sucesors:</label>
-              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
-              <option >ergerg5445</option>
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              </select>
-
-              <label for="impact_loss">Preparation Time:</label>
-              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              </select>
-
-              <label for="strengths">Comments:</label>
-              <textarea  name="strengths" id="strengths" rows="50" cols="50" value="{{strengths}}"></textarea>
-        </div>
-              <div class="form-group">
-              <div class="txt_option">
-                <label>Option 3</label>
               </div>
 
+              <label for="impact_loss">Preparation Time:</label>
+              <div class="shape">
+              <select class="form-control"  id="" name="">
+              <option value="ergerg5445">ergerg5445</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+
+              <label for="txt_sucesor_a">Comments:</label>
+              <textarea  name="txt_sucesor_a" id="" rows="10" cols="50" value=""></textarea>
+        </div>
+
+         <div class="subtitulo">
+              <label>Option 2</label>
+         </div>
+
+        <div class="form-group">
+              <div id="select">
               <label for="impact_loss">Sucesors:</label>
+              </div>
+              <div class="shape">
+              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
+              <option value="fdgdf343df">fdgdf343df</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+
+              <label for="impact_loss">Preparation Time:</label>
+              <div class="shape">
+              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+
+               <label for="txt_sucesor_b">Comments:</label>
+              <textarea  name="txt_sucesor_b" id="" rows="10" cols="50" value=""></textarea>
+        </div>
+         <div class="subtitulo">
+              <label>Option 3</label>
+        </div>
+        <div class="form-group">
+              <label for="impact_loss">Sucesors:</label>
+              <div class="shape">
+              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
+              <option value="dfeferfe45">dfeferfe45</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+
+              <label for="impact_loss">Preparation Time:</label>
+              <div class="shape">
               <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
               <option ></option>
               <option ></option>
               <option ></option>
               <option ></option>
               </select>
+              </div>
 
-              <label for="impact_loss">Preparation Time:</label>
-              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              </select>
-
-              <label for="strengths">Comments:</label>
-              <textarea  name="strengths" id="strengths" rows="50" cols="50" value="{{strengths}}"></textarea>
+              <label for="txt_sucesor_c">Comments:</label>
+              <textarea  name="txt_sucesor_c" id="" rows="10" cols="50" value=""></textarea>
+        </div>
         </div>
 
-        <div id="btn_cancel">
-               <button type="submit" class="cancel">Cancel</button>
-         </div>
+      <div id="rightcontent">
+      </div>
 
-         <div id="btn_save">
-               <button type="submit" class="save">Save</button>
-         </div>
+      <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+      </div>
+      <div id="btn_save">
+         <button type="submit" class="save">Save</button>
+      </div>
 
+        
               
         </div>
               </form>  
