@@ -1,5 +1,5 @@
 {{> top-nav}}
-<h1>{{name}}</h1>
+
     <div class="container sec-busqueda">
         
     <div class="row">
@@ -28,19 +28,20 @@
           
            <div class="form-group">
             <label class="control-label">Name: </label>
-            <input type="text" name="name" id="name" value="{{name}}"><br>
+            <input type="text" name="name" id="name" value="{{name}}">
           </div>
 
           <div class="form-group">
             <label class="control-label">Job position:</label>
-            <input type="text" name="job_position" id="job_position" value="{{job_position}}"><br>
-          </div>
-
+            <input type="text" name="job_position" id="job_position" value="{{job_position}}">
+            </div>
+            
           <div class="form-group">
+        
             <label class="control-label">Área:</label>
-            <input type="text" name="area" id="area" vaue="{{area}}"><br>
+            <input type="text" name="area" id="area" vaue="{{area}}">
           </div>
-
+          
             <div class="form-group">
             <label for="potential">potential:</label>
               <select class="form-control" id="potential" name="potential">
@@ -101,7 +102,7 @@
         
                <button type="submit">Save</button>
         </div>
-
+              </div>
         <div class="mpanel pan-invisible" id="ca">
               
         <h1 class="section-header">
@@ -132,5 +133,7 @@
               </form>  
 
           </div>
-    </div>
+            </div>
+</div>
+    
         
