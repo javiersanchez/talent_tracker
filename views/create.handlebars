@@ -1,10 +1,11 @@
 {{> top-nav}}
+    {{> search-bar}}
 
     <div class="container sec-busqueda">
         
     <div class="row">
         <div class="col-lg-8">
-    {{> search-bar}}
+
 
         </div>
         <div class="col-lg-4">
@@ -19,7 +20,7 @@
             </div>
       <div class="col-lg-10 main-container">
       
-          <form action="/crear" method="post" class="form-horizontal">
+          <form action="/create" method="post" class="form-horizontal">
         <div class="mpanel pan-visible" id="tr">
               
         <h1 class="section-header">
@@ -35,19 +36,16 @@
             <label class="control-label">Job position:</label>
             <input type="text" name="job_position" id="job_position" value="{{job_position}}">
             </div>
-
+            
           <div class="form-group">
         
-
             <label class="control-label">Área:</label>
             <input type="text" name="area" id="area" vaue="{{area}}">
-              </div>
+          </div>
           
-
-
             <div class="form-group">
             <label for="potential">potential:</label>
-              <select class="form-control" id="potential">
+              <select class="form-control" id="potential" name="potential">
                 <option value="high potencial" selected="">High potential</option>
                 <option value="potential">Potential</option>
                 <option value="consolidate" >Consolidated</option>
@@ -56,7 +54,7 @@
 
           <div class="form-group">
            <label for="career">Career:</label>
-           <select class="form-control" id="career">
+           <select class="form-control" id="career" name="career">
               <option selected="">Management</option>
               <option>Specialist</option>
               <option>Both</option>
@@ -65,27 +63,37 @@
 
           <div class="form-group">
             <label for="status" id="tipo_ubicacion">Status:</label>
-            <select class="form-control" data-with="Do not apply" id="status">
-              <option>Next To Retirement</option>
-              <option>Recent Entry</option>
-              <option>Attitude Problems</option>
-              <option>Inability</option>
-              <option>Recent Movement</option>
-              <option selected="">Do NoT Apply</option>
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option value="Next To Retirement">Next To Retirement</option>
+              <option value="Recent Entry">Recent Entry</option>
+              <option value="Attitude Problems">Attitude Problems</option>
+              <option value="Inability">Inability</option>
+              <option value="Recent Movement">Recent Movement</option>
+              <option value="Do Not Apply" selected="">Do Not Apply</option>
             </select>
           </div>
 
          <div class="form-group">
-              <input type="checkbox" name="key_contributor" value="1"> Key contributor:<br>
-              <input type="checkbox" name="specialist_critical" value="1" checked>Specialist Critical:<br>
+              <input type="checkbox" name="key_contributor" id="key_contributor" value="1"> Key contributor:<br>
+              <input type="checkbox" name="specialist_critical" id="specialist_critical" value="1" checked>Specialist Critical:<br>
           </div>
 
           <div class="form-group">
             <label for="probability_of_loss">Probability Of Loss:</label>
-            <select class="form-control" data-with="probability_of_loss" id="probability_of_loss">
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
+            <select class="form-control" data-with="probability_of_loss" id="probability_of_loss" name="probability_of_loss">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            </div>
+
+
+          <div class="form-group">
+            <label for="impact_loss">Impact Loss:</label>
+            <select class="form-control" data-with="impact_loss" id="impact_loss" name="impact_loss">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
             </select>
             </div>
 
@@ -102,6 +110,15 @@
         <div class="form-group">
         <label for="relevant_technical_knowledge">Impact Loss</label>
          <textarea  name="relevant_technical_knowledge" id="relevant_technical_knowledge" rows="10" cols="50" value="{{relevant_technical_knowledge}}"></textarea>
+         
+         <div id="btn_cancel">
+               <button type="submit">Cancel</button>
+         </div>
+
+        <div id="btn_save">
+           <button type="submit">Save</button>
+       </div>
+
         </div>
               </div>
         <div class="mpanel pan-invisible" id="ca">
@@ -111,9 +128,10 @@
         </h1>
            <div class="form-group">
             <label class="control-label">Job position:</label>
-            <input type="text" name="job_position"><br>
-            </div>
-              </div>
+            <input type="text" name="aspiration_job_position"><br>
+          </div>
+          
+        </div>
         <div class="mpanel pan-invisible" id="com">
               
         <h1 class="section-header">

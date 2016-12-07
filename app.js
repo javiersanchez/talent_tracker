@@ -19,16 +19,16 @@ admin.initializeApp({
 });
 
 //Llamamos Handlebars para usarlo en el proyecto y asignamos un layout (default)
-var handlebars = require('express-handlebars').create(
-    {defaultLayout: 'main',
-                                                      helpers:{
-                                                          section: function(name, options){
-                                                              if(!this._sections) this._sections = {};
-                                                              this._sections[name] = options.fn(this);
-                                                              return null;
-                                                          }
-                                                        }
-                                                      });
+var handlebars = require('express-handlebars').create( {
+    defaultLayout: 'main',
+    helpers:{
+      section: function(name, options){
+          if(!this._sections) this._sections = {};
+          this._sections[name] = options.fn(this);
+          return null;
+      }
+    }
+    });
 
 //Asignación de HB como engine de rendereo
 app.engine('handlebars', handlebars.engine);
@@ -37,9 +37,9 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(require('body-parser').urlencoded({extended:true}));
 
-/*app.get('/', function (req, res) {
-  res.send('Hello World!')
-})*/
+app.get('/', function (req, res) {
+  res.redirect('/login')
+})
 
 //Asignar ruta publica pra elementos estaticos
 app.use(express.static(__dirname + "/public"));
@@ -75,6 +75,7 @@ app.post('/search_result', function (req, res) {
 })
 
 app.get('/create', function (req, res) {
+
     
  /*
   var tName= "tName";
@@ -98,11 +99,12 @@ app.get('/create', function (req, res) {
    // var context = {name:"Marco", user:"Julius Papagorgio"};
     
     res.render("create");
-})
+
+});
 
 app.post('/create', function (req, res) {
     var person = req.body;
-    
+    /*
     var db = firebase.database();		
     var tabla = db.ref().child("partners");	
     tabla.push().set( {
@@ -110,7 +112,7 @@ app.post('/create', function (req, res) {
         job_position: req.body.tPosition,
         area_of_interest : req.body.tArea
     });
-    
+    */
     res.send(req.body)
 })
 
