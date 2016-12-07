@@ -7,7 +7,7 @@
         <div class="col-lg-8">
         </div>
         <div class="col-lg-4">
-        <h4>Personita</h4>
+       <!-- <h4>Personita</h4> -->
         </div>
         </div>
         </div>
@@ -110,11 +110,11 @@
          <textarea  name="relevant_technical_knowledge" id="relevant_technical_knowledge" rows="10" cols="50" value="{{relevant_technical_knowledge}}"></textarea>
          
          <div id="btn_cancel">
-               <button type="submit">Cancel</button>
+               <button type="submit" class="cancel">Cancel</button>
          </div>
 
          <div id="btn_save">
-           <button type="submit">Save</button>
+               <button type="submit" class="save">Save</button>
          </div>
 
          </div>
@@ -161,36 +161,52 @@
 
           <div class="form-group">
               <label>Movility</label>
-
             <label for="movement_time_areas_interest" id="movement_time_areas_interest">Movement time for areas of interest:</label>
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" selected >Inmediate</option>
+              <option valu="Short Time: Now To 12 Months">Short Time: Now To 12 Months</option>
+              <option value="Medium Term: 12 To 36 Months">Medium Term: 12 To 36 Months</option>
+              <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
               <option valu="Do not apply">Do not apply</option>
             </select>
 
             <label for="possibility_of_development" id="possibility_of_development">Possibility of development:</label>
             <select class="form-control" data-with="Do not apply" id="status" name="status">
-             <option value="Inmediate" selected >Inmediate</option>
-             <option valu="Do not apply">Do not apply</option>
+              <option value="Inmediate" selected >Inmediate</option>
+              <option valu="Short Time: Now To 12 Months">Short Time: Now To 12 Months</option>
+              <option value="Medium Term: 12 To 36 Months">Medium Term: 12 To 36 Months</option>
+              <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
+              <option valu="Do not apply">Do not apply</option>
             </select>
+
             <label for="movement_time_international_mobility" id="movement_time_international_mobility">Attitude Problems: </label>
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" >Inmediate</option>
+              <option value="Review Match Vs Job Position And Job Description" >Review Match Vs Job Position And Job Description</option>
+              <option value="Stay In Current Position" >Stay In Current Position</option>
+              <option value="Promotion To High Position" >Promotion To High Position</option>
+              <option value="Resent Entry" >Resent Entry</option>
               <option valu="Do not apply" selected >Do not apply</option>
             </select>
             <label for="possibility_of_development" id="possibility_of_development">Time development movement possibility:</label>
             <select class="form-control" data-with="Do not apply" id="status" name="status">
-             <option value="Inmediate">Inmediate</option>
-             <option valu="Do not apply" selected >Do not apply</option>
+              <option value="Inmediate" >Inmediate</option>
+              <option value="Review Match Vs Job Position And Job Description" >Review Match Vs Job Position And Job Description</option>
+              <option value="Stay In Current Position" >Stay In Current Position</option>
+              <option value="Promotion To High Position" >Promotion To High Position</option>
+              <option value="Resent Entry" >Resent Entry</option>
+              <option valu="Do not apply" selected >Do not apply</option>
             </select>
           </div>
-            <div id="btn_cancel">
-               <button type="submit">Cancel</button>
+        
+        <div id="btn_cancel">
+               <button type="submit" class="cancel">Cancel</button>
          </div>
 
          <div id="btn_save">
-           <button type="submit">Save</button>
+               <button type="submit" class="save">Save</button>
          </div>
+
           
         </div>
         <div class="mpanel pan-invisible" id="com">
@@ -198,6 +214,48 @@
         <h1 class="section-header">
             COMPETENCIES
         </h1>
+        <div class="form-group">
+              <label>1</label>
+              <label for="impact_loss">Representation:</label>
+              <select class="form-control" data-with="impact_loss" id="representation" name="representation">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5" selected >Level 5</option>
+              </select>
+        </div>
+        <div class="form-group">
+              <label>2</label>
+              <label for="impact_loss">Representation:</label>
+              <select class="form-control" data-with="impact_loss" id="strategic_vision" name="strategic_vision">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5" selected >Level 5</option>
+              </select>
+        </div>
+        <div class="form-group">
+               <label>3</label>
+              <label for="impact_loss">Representation:</label>
+              <select class="form-control" data-with="impact_loss" id="business_understanding" name="business_understanding">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5" selected>Level 5</option>
+              </select>
+        </div>
+
+         <div id="btn_cancel">
+               <button type="submit" class="cancel">Cancel</button>
+         </div>
+
+         <div id="btn_save">
+               <button type="submit" class="save">Save</button>
+         </div>
+
                
         </div>
        
@@ -206,7 +264,89 @@
         <h1 class="section-header">
             SUCESSORS
         </h1>
-          
+        
+       
+         <div class="form-group">
+              <div class="txt_option">
+                <label>Option 1</label>
+              </div>
+
+              <label for="impact_loss">Sucesors:</label>
+              <select class="form-control" data-with="impact_loss" id="succesor_a" name="succesor_a">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+
+              <label for="impact_loss">Preparation Time:</label>
+              <select class="form-control" data-with="impact_loss" id="succesor_a" name="succesor_a">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+
+              <label for="strengths">Comments:</label>
+              <textarea  name="strengths" id="strengths" rows="50" cols="50" value="{{strengths}}"></textarea>
+        </div>
+
+              <div class="form-group">
+              <div class="txt_option">
+                <label>Option 2</label>
+              </div>
+              <label for="impact_loss">Sucesors:</label>
+              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
+              <option >ergerg5445</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+
+              <label for="impact_loss">Preparation Time:</label>
+              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+
+              <label for="strengths">Comments:</label>
+              <textarea  name="strengths" id="strengths" rows="50" cols="50" value="{{strengths}}"></textarea>
+        </div>
+              <div class="form-group">
+              <div class="txt_option">
+                <label>Option 3</label>
+              </div>
+
+              <label for="impact_loss">Sucesors:</label>
+              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+
+              <label for="impact_loss">Preparation Time:</label>
+              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+
+              <label for="strengths">Comments:</label>
+              <textarea  name="strengths" id="strengths" rows="50" cols="50" value="{{strengths}}"></textarea>
+        </div>
+
+        <div id="btn_cancel">
+               <button type="submit" class="cancel">Cancel</button>
+         </div>
+
+         <div id="btn_save">
+               <button type="submit" class="save">Save</button>
+         </div>
+
               
         </div>
               </form>  
