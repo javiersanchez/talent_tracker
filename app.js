@@ -6,6 +6,8 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 
+var pdf = require('html-pdf');
+
 firebase = require('firebase');
 var config = {
     apiKey: "AIzaSyDoRCqwF3xxMIh3AuzU4mQtvZ6i-n0xGuc",
@@ -33,13 +35,12 @@ var handlebars = require('express-handlebars').create( {
           return null;
       },
         checkSelector: function(v1, v2, options){
-            console.log(v1);
-            console.log(v2);
+            
             if(v1 == v2){ 
-                console.log(options.fn(this));
+               
                 return options.fn(this);
             }else {
-                console.log(options.inverse(this));
+               
                 //return options.inverse(this);    
                 return null;
             }
@@ -254,14 +255,30 @@ app.get("/get_pdf/:id",function(req,res){
    "succesor_c": "dfeferfe45"
     }
     
-    fs.writeFile(context.name + ".txt",context, function(err){
+    //Generamos el HTML
+    //console.log(__dirname + "/views/view.handlebars");
+    var template = handlebars.render(__dirname + "/views/view.handlebars", context);
+    for(var t in template){
+        console.log(template[t]);
+    }
+    /*fs.writeFile(context.name + ".html",handlebars.renderView(template), function(err){
         if(err){
             return console.log(err);
         }
+    });*/
+    fs.writeFileSync(context.name + ".html",template);
+    
+    //Generamos el PDF
+    var html = fs.readFileSync(__dirname + '/' + context.name + ".html", 'utf8');
+    var options = { format: 'Letter' };
+
+    pdf.create(html, options).toFile(__dirname + '/' + context.name + ".pdf", function(err, res) {
+      if (err) return console.log(err);
+      //console.log(res); // { filename: '/app/businesscard.pdf' } 
     });
     //res.send("DONE");
     
-    var file = __dirname + '/' + context.name + ".txt";
+    var file = __dirname + '/' + context.name + ".pdf";
 
   var filename = path.basename(file);
   var mimetype = mime.lookup(file);
@@ -269,8 +286,10 @@ app.get("/get_pdf/:id",function(req,res){
   res.setHeader('Content-disposition', 'attachment; filename=' + filename);
   res.setHeader('Content-type', mimetype);
 
-  var filestream = fs.createReadStream(file);
-  filestream.pipe(res);
+ // var filestream = fs.createReadStream(file);
+  //filestream.pipe(res);
+    
+    //res.redirect("/view/12345"); //TODO PONER LOS IDS DINAMICOS
     
 });
 
