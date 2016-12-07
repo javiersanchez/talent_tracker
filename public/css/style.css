@@ -307,3 +307,22 @@ color: #FFFFFF;
     margin: 20px;
 }
 
+div#btn_save {
+    width: 50%;
+    float: left;
+}
+#rightcontent{
+    width: 30%;
+    height: 500px;
+   background: #FFFFFF ;
+   box-shadow: 0 2px 3px 0 rgba(95,95,95,0.50);
+   border-radius: 8px;
+   float: right;
+   margin: 20px;
+}
+
+#leftcontent{
+    width: 70%;
+    height: auto;
+   float: left;
+}
