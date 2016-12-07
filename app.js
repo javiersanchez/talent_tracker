@@ -95,9 +95,9 @@ app.get('/create', function (req, res) {
     */
 
   //res.send('Hello World!')2
-    var context = {name:"Marco", user:"Julius Papagorgio"};
+   // var context = {name:"Marco", user:"Julius Papagorgio"};
     
-    res.render("create", context);
+    res.render("create");
 })
 
 app.post('/create', function (req, res) {
