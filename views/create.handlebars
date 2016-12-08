@@ -43,14 +43,13 @@
             </div>
             
           <div class="form-group">
-        
             <label class="control-label tpdf">Área:</label>
             <input type="text" name="area" id="area" vaue="{{area}}" class="general">
           </div>
           
           
             <div class="form-group">
-            <label for="potential">potential:</label>
+            <label for="potential">Potential:</label>
             <div class="shape">
               <select class="form-control" id="potential" name="potential">
                 <option value="high potencial" selected="">High potential</option>
@@ -85,7 +84,7 @@
             </div>
           </div>
       
-             <div class="form-group">
+             <div id="ckecks">
                   Key contributor:<input type="checkbox" class="check" name="key_contributor" id="key_contributor" value="1"> 
                   Specialist Critical:<input type="checkbox" class="check" name="specialist_critical" id="specialist_critical" value="1" checked>
               </div>
@@ -115,7 +114,7 @@
             </div>
 
         <div class="form-group">
-        <label for="areas_to_develop">Áreas To Develop:</label>
+        <label for="areas_to_develop">Areas To Develop:</label>
         <textarea  name="areas_to_develop" id="areas_to_develop" rows="10" cols="50" value="{{areas_to_develop}}"></textarea>
         </div>
 
@@ -185,8 +184,11 @@
             Top Management: <input type="checkbox" class="check" {{#checkSelector top_management "1"}} checked {{/checkSelector}} name=“top_management” id=“top_management” value="1"> 
             </div>
 
-          
+           
+  
+		  
             <div id="checkbox_admin">
+			<fieldset class="checkboxes">
             <span>Accounting: </span><input type="checkbox" class="check"  {{#checkSelector accounting "1"}} checked="checked" {{/checkSelector}} name="accounting" id="accounting" value="1" checked>
 
             <span>Accounting Audit:</span><input type="checkbox" class="check" {{#checkSelector accounting_audit "1"}} checked="checked" {{/checkSelector}}  name="accounting_audit" id="accounting_audit" value="1" checked>
@@ -201,6 +203,7 @@
 
             <span>Financial Planning:</span><input type="checkbox" class="check" {{#checkSelector financial_planning "1"}} checked="checked" {{/checkSelector}} name="financial_planning” id="financial_planning” value="1" checked>
             </div>
+			</fieldset>
 
             <div id="checkbox_admin2">
             Marketing: <input type="checkbox" class="check" {{#checkSelector marketing "1"}} checked="checked" {{/checkSelector}} name="marketing” id="marketing” value="1" checked>
@@ -254,10 +257,8 @@
              </div></div>
          </div>
 
-          
-          <label class="subtitulo">Movility</label>
           <div class="form-group">
- 
+          <label class="subtitulo">Movility</label>
             <label for="movement_time_areas_interest" id="movement_time_areas_interest">Movement time for areas of interest:</label>
             <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
@@ -267,8 +268,9 @@
               <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
               <option valu="Do not apply">Do not apply</option>
             </select>
-            </div>
-
+            </div></div>
+			
+			<div class="form-group">
             <label for="possibility_of_development" id="possibility_of_development">Possibility of development:</label>
             <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
@@ -278,9 +280,10 @@
               <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
               <option valu="Do not apply">Do not apply</option>
             </select>
-            </div>
-
-            <label for="movement_time_international_mobility" id="movement_time_international_mobility">Attitude Problems: </label>
+            </div></div>
+			
+			<div class="form-group">
+            <label for="attitude_problems" id="attitude_problems">Attitude Problems: </label>
             <div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" >Inmediate</option>
@@ -290,10 +293,11 @@
               <option value="Resent Entry" >Resent Entry</option>
               <option valu="Do not apply" selected >Do not apply</option>
             </select>
-            </div>
+            </div></div>
 
+			<div class="form-group">
             <label for="possibility_of_development" id="possibility_of_development">Time development movement possibility:</label>
-            <div class="shape">
+			<div class="shape">
             <select class="form-control" data-with="Do not apply" id="status" name="status">
               <option value="Inmediate" >Inmediate</option>
               <option value="Review Match Vs Job Position And Job Description" >Review Match Vs Job Position And Job Description</option>
@@ -302,9 +306,9 @@
               <option value="Resent Entry" >Resent Entry</option>
               <option valu="Do not apply" selected >Do not apply</option>
             </select>
-            </div>
+            </div></div>
           </div>
-          </div>
+
        
        <div id="rightcontent">
         </div>
@@ -330,8 +334,8 @@
         ACTUAL STATUS
         </div>
         <div id="leftcontent">
+		<label class="text_numeros">1</label>
         <div class="form-group">
-          <label>1</label>
             <label for="impact_loss">Representation:</label>
             <div class="shape">
             <select class="form-control" data-with="impact_loss" id="representation" name="representation">
@@ -343,8 +347,9 @@
             </select>
             </div>
         </div>
-        <div class="form-group">
-          <label>2</label>
+		
+        <label class="text_numeros">2</label>
+		<div class="form-group">
             <label for="impact_loss">Representation:</label>
             <div class="shape">
             <select class="form-control" data-with="impact_loss" id="strategic_vision" name="strategic_vision">
@@ -356,8 +361,10 @@
             </select>
             </div>
         </div>
+        
+		<label class="text_numeros">3</label>		
         <div class="form-group">
-           <label>3</label>
+
             <label for="impact_loss">Representation:</label>
             <div class="shape">
             <select class="form-control" data-with="impact_loss" id="business_understanding" name="business_understanding">
@@ -372,7 +379,7 @@
       </div>
 
         <div id="rightcontent">
-        holi
+       
         </div>
 
         <div id="btn_cancel">
@@ -397,10 +404,12 @@
         <div class="titleright">
         ACTUAL STATUS
         </div>
-          <div id="leftcontent">
+		
+       <div id="leftcontent">
              <div class="subtitulo">
                 <label>Option 1</label>
               </div>
+		  <div id="select_sucesors">
           <div class="form-group">
               <label for="impact_loss">Sucesors:</label>
               <div class="shape">
@@ -410,8 +419,10 @@
               <option ></option>
               <option ></option>
               </select>
-              </div>
-
+              </div></div>
+		 </div>
+		 
+		 <div class="form-group">
               <label for="impact_loss">Preparation Time:</label>
               <div class="shape">
               <select class="form-control"  id="" name="">
@@ -421,68 +432,77 @@
               <option ></option>
               </select>
               </div>
-
-              <label for="txt_sucesor_a">Comments:</label>
-              <textarea  name="txt_sucesor_a" id="" rows="10" cols="50" value=""></textarea>
-        </div>
-
-         <div class="subtitulo">
+		   </div>
+			
+			<div class="form-group">
+            <label for="txt_sucesor_b">Comments:</label>
+            <textarea  name="txt_sucesor_a" id="" rows="10" cols="50" value=""></textarea>
+			</div>
+			
+			  <div class="subtitulo">
               <label>Option 2</label>
-         </div>
-
-        <div class="form-group">
-              <div id="select">
-              <label for="impact_loss">Sucesors:</label>
               </div>
+		  <div id="select_sucesors">
+          <div class="form-group">
+              <label for="impact_loss">Sucesors:</label>
               <div class="shape">
               <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div></div>
+		 </div>
+		 <div class="form-group">
+              <label for="impact_loss">Preparation Time:</label>
+              <div class="shape">
+              <select class="form-control"  id="" name="">
+              <option value="ergerg5445">ergerg5445</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+		   </div>
+			
+			<div class="form-group">
+            <label for="txt_sucesor_c">Comments:</label>
+            <textarea  name="txt_sucesor_c" id="" rows="10" cols="50" value=""></textarea>
+			</div>
+
+			<div class="subtitulo"> 
+			<label>Option 3</label></div>
+			 <div id="select_sucesors">
+            <div class="form-group">
+
+              <label for="impact_loss">Sucesors:</label>
+              <div class="shape">
+              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
               <option value="fdgdf343df">fdgdf343df</option>
               <option ></option>
               <option ></option>
               <option ></option>
               </select>
-              </div>
-
+              </div></div>
+		 </div>
+		 <div class="form-group">
               <label for="impact_loss">Preparation Time:</label>
               <div class="shape">
-              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              </select>
-              </div>
-
-               <label for="txt_sucesor_b">Comments:</label>
-              <textarea  name="txt_sucesor_b" id="" rows="10" cols="50" value=""></textarea>
-        </div>
-         <div class="subtitulo">
-              <label>Option 3</label>
-        </div>
-        <div class="form-group">
-              <label for="impact_loss">Sucesors:</label>
-              <div class="shape">
-              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
-              <option value="dfeferfe45">dfeferfe45</option>
+              <select class="form-control"  id="" name="">
+                <option value="dfeferfe45">dfeferfe45</option>
               <option ></option>
               <option ></option>
               <option ></option>
               </select>
               </div>
-
-              <label for="impact_loss">Preparation Time:</label>
-              <div class="shape">
-              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              <option ></option>
-              </select>
-              </div>
-
-              <label for="txt_sucesor_c">Comments:</label>
-              <textarea  name="txt_sucesor_c" id="" rows="10" cols="50" value=""></textarea>
-        </div>
+		   </div>
+			
+			<div class="form-group">
+            <label for="txt_sucesor_c">Comments:</label>
+            <textarea  name="txt_sucesor_a" id="" rows="10" cols="50" value=""></textarea>
+			</div>
+			
         </div>
 
       <div id="rightcontent">
