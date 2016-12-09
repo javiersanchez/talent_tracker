@@ -291,6 +291,7 @@ color: #FFFFFF;
     /* font-family: Avenir-Book; */
     color: #4A4A4A;
     display: inline-block;
+    float: inherit;
 }
 
 .check {
@@ -342,10 +343,89 @@ div#btn_save {
 	height: 146px;
 }
 .form-group label {
-    float: left;
+    /* float: left; */
     margin: 5px 20px;
+    text-align: left !important;
 }
 .subtitulo{
 	color: #337ab7;
 	font-size: 16px;
+	width: 100%;
+}
+.titleleft{
+   width: 65%;
+   height: 45px;
+   float: left;
+   font-size: 14px;
+   color: #9B9B9B ;
+   text-align: center;
+   margin: 20px 0;
+}
+
+.titleright{
+   width: 28%;
+   height: 45px;
+   float: right;
+   font-size: 14px;
+   color: #9B9B9B ;
+   text-align: center;
+   margin: 20px;
+}
+div#checks_seccion1 {
+    width: 145px;
+    height: 110px;
+    float: left;
+}
+div#checks_seccion2 {
+    width: 145px;
+    height: 110px;
+    float: left;
+}
+div#checks_seccion3 {
+    width: 145px;
+    height: 110px;
+    float: left;
+}
+div#checks {
+    border-bottom: 2px solid #777;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 19px;
+    margin-bottom: 20px;
+}
+div#checkbox_areas {
+    width: 173px;
+    /* height: 200px; */
+}
+div#ckecks {
+    width: 150px;
+    padding-left: 6px;
+    padding-bottom: 30px;
+    padding-top: 9px;
+}
+label {
+    /* Para asegurarse que todos los labels tienen el mismo tama�o y est�n alineados correctamente */
+    display: inline-block;
+    width: 90px;
+    font-weight: normal;
+}
+textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+}
+.form-group label{
+	float: left;
+}
+label#movement_time_areas_interest, label#movement_time_international_mobility, label#possibility_of_development, label#attitude_problems {
+    width: 200px;
+}
+.text_numeros{
+	font-size: 40px;
+	color: rgba(34, 105, 167, 0.83);
+	float: left;
+}
+.select_sucesors {float: left;width: 308px;}
+div#select_sucesors {
+    float: left;
 }
