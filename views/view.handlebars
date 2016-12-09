@@ -6,19 +6,25 @@
             PREVIEW
      </h1>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
             <img src="/images/logopdf.png" alt="Talent tracker">
         </div>
-        <div class="col-lg-6" style="border:1px solid #FF000;">
+        <div class="col-lg-8" style="border:1px solid #FF000;">
             <div class="resultadobusqueda pull-right">
-             <div class="foto">
+             <div class="row">
+                 <div class="col-lg-6">                   
+             <div class="datospdf">
+               {{name}}<br >
+              {{job_position}}<br >
+              {{area}}
+             </div>
+                 </div>
+                 <div class="col-lg-6">
+                     <div class="foto">
              <img src="/images/avatar.png"/>
              </div>
-             <div class="datospdf">
-               {{name}}
-              {{job_position}}
-              {{area}}
-             </div> 
+                 </div>
+            </div> 
            </div>
         </div>        
     </div>    
@@ -659,16 +665,13 @@
             
             
         </div>
+        <div class="">
+            <button type="submit" class="save">Download PDF</button>
+        </div>
 <!--end-->        
 </div>
 
-<div class="row">
-   <div class="col-lg-6">
-   </div>
-   <div class="col-lg-6">
-        <button type="submit" class="save">Download PDF</button>
-   </div>
-</div>
+
 
 
 
